@@ -152,6 +152,7 @@ jobs:
           echo ".scannerwork" >> .npmignore
           echo "artifacts" >> .npmignore
           cat .npmignore
+
       - name: Publish NPM
         if: ${{ github.ref == 'refs/heads/master' || github.ref  == 'refs/heads/main' }}
         run: npm publish
