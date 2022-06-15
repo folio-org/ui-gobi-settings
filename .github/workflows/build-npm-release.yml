@@ -117,6 +117,7 @@ jobs:
           docker run --name okapi -t -detach folioorg/okapi:latest dev
           echo "OKAPI_IP=$(docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' okapi)" >> $GITHUB_ENV
           sleep 10
+
       - name: Pull all Module descriptors to local Okapi instance
         if: ${{ env.PUBLISH_MOD_DESCRIPTOR == 'true' }}
         uses: fjogeleit/http-request-action@master
@@ -205,6 +206,7 @@ jobs:
           echo ".scannerwork" >> .npmignore
           echo "artifacts" >> .npmignore
           cat .npmignore
+
       - name: Publish NPM to FOLIO NPM registry
         run: npm publish
         env:
