@@ -1,24 +1,43 @@
-import React from 'react';
-import { PropTypes } from 'prop-types';
-import { Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import { Pane } from '@folio/stripes/components';
+import { Settings } from '@folio/stripes/smart-components';
+import { usePaneFocus } from '@folio/stripes-acq-components';
 
-const GobiIntegration = ({ match: { path } }) => {
+import { APIKey } from '../APIKey';
+import { MappingConfiguration } from '../MappingConfiguration';
+
+const sections = [
+  {
+    label: <FormattedMessage id="ui-gobi-settings.integrationDetails" />,
+    pages: [
+      {
+        component: APIKey,
+        label: <FormattedMessage id="ui-gobi-settings.apiKey" />,
+        route: 'api-key',
+        perm: 'ui-gobi-settings.permission.settings',
+      },
+      {
+        component: MappingConfiguration,
+        label: <FormattedMessage id="ui-gobi-settings.mappingConfig" />,
+        route: 'mapping-configuration',
+        perm: 'ui-gobi-settings.permission.settings',
+      },
+    ],
+  },
+];
+
+const GobiIntegration = ({ ...props }) => {
+  const { paneTitleRef } = usePaneFocus();
+
   return (
-    <Switch>
-      <Route
-        path={path}
-        render={() => (
-          <Pane
-            id="pane-gobi-settings-list"
-            defaultWidth="fill"
-            paneTitle={<FormattedMessage id="ui-gobi-settings.meta.title" />}
-          />
-        )}
-      />
-    </Switch>
+    <Settings
+      {...props}
+      navPaneWidth="20%"
+      paneTitle={<FormattedMessage id="ui-gobi-settings.meta.title" />}
+      paneTitleRef={paneTitleRef}
+      sections={sections}
+    />
   );
 };
 
