@@ -1,11 +1,7 @@
 {
     "meta.title": "GOBI integration",
-    "apiKey": "مفتاح واجهة برمجة التطبيقات",
-    "approvals": "الموافقات",
     "configFiles": "ملفات التهيئة",
-    "folioApiKey": "FOLIO API Key",
     "integrationDetails": "تفاصيل التكامل",
-    "mappingConfig": "Mapping Configuration",
-    "url": "عنوان URL",
+    "mappingConfig": "تهيئة التخطيط",
     "permission.settings": "GOBI Integration: view and edit settings"
 }

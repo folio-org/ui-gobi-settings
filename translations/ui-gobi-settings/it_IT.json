@@ -1,11 +1,7 @@
 {
     "meta.title": "GOBI integration",
-    "apiKey": "API Key",
-    "approvals": "Approvals",
     "configFiles": "Configuration Files",
-    "folioApiKey": "FOLIO API Key",
     "integrationDetails": "Integration Details",
     "mappingConfig": "Mapping Configuration",
-    "url": "URL",
     "permission.settings": "GOBI Integration: view and edit settings"
 }

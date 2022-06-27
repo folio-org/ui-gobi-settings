@@ -1,11 +1,7 @@
 {
     "meta.title": "Integrace GOBI",
-    "apiKey": "Klíč API",
-    "approvals": "Schválení",
     "configFiles": "Konfigurační soubory",
-    "folioApiKey": "Klíč API FOLIO",
     "integrationDetails": "Podrobnosti o integraci",
     "mappingConfig": "Konfigurace mapování",
-    "url": "URL",
     "permission.settings": "Integrace GOBI: zobrazení a úprava nastavení"
 }
