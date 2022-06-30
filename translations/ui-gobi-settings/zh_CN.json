@@ -1,7 +1,7 @@
 {
-    "meta.title": "GOBI integration",
-    "configFiles": "Configuration Files",
-    "integrationDetails": "Integration Details",
-    "mappingConfig": "Mapping Configuration",
-    "permission.settings": "GOBI Integration: view and edit settings"
+    "meta.title": "GOBI集成",
+    "configFiles": "配置文件",
+    "integrationDetails": "集成详情",
+    "mappingConfig": "映射配置",
+    "permission.settings": "GOBI集成：查看和编辑设置"
 }
