@@ -1,7 +1,7 @@
 {
-    "meta.title": "GOBI integration",
-    "configFiles": "Configuration Files",
-    "integrationDetails": "Integration Details",
-    "mappingConfig": "Mapping Configuration",
-    "permission.settings": "GOBI Integration: view and edit settings"
+    "meta.title": "Integração GOBI",
+    "configFiles": "Arquivos de configuração",
+    "integrationDetails": "Detalhes de integração",
+    "mappingConfig": "Configuração de Mapeamento",
+    "permission.settings": "Integração GOBI: visualizar e editar configurações"
 }
