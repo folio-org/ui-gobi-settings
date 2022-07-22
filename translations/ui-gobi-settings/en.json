@@ -1,9 +1,31 @@
 {
   "meta.title": "GOBI integration",
+
+  "button.edit": "Edit",
   
   "configFiles": "Configuration Files",
   "integrationDetails": "Integration Details",
   "mappingConfig": "Mapping Configuration",
+
+  "order.mappings.accordion.poInfo": "PO information",
+  "order.mappings.accordion.poOngoing": "Ongoing PO information",
+  "order.mappings.accordion.poNotes": "Notes",
+  "order.mappings.accordion.poTags": "PO tags",
+  "order.mappings.accordion.poSummary": "PO summary",
+  "order.mappings.accordion.poItemDetails": "Item details",
+  "order.mappings.accordion.polDetails": "PO line details",
+  "order.mappings.accordion.polOngoingOrder": "POL Ongoing order information",
+  "order.mappings.accordion.polCostDetails": "Cost details",
+  "order.mappings.accordion.polVendor": "Vendor",
+  "order.mappings.accordion.polFundDistribution": "Fund distribution",
+  "order.mappings.accordion.polEResources": "E-resources details",
+  "order.mappings.accordion.polFResources": "Physical resource details",
+  "order.mappings.accordion.polOtherResources": "Other resource details",
+  "order.mappings.accordion.polLocation": "Location",
+  "order.mappings.accordion.polTags": "POL tags",
+  "order.mappings.action.restoreDefaultConfig": "Restore default configuration",
+
+  "settings": "GOBI Integration settings",
 
   "permission.settings": "GOBI Integration: view and edit settings"
 }

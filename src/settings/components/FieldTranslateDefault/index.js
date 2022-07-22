@@ -1,0 +1,1 @@
+export { FieldTranslateDefault } from './FieldTranslateDefault';
