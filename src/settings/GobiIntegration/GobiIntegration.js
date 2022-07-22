@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
+import {
+  CommandList,
+  defaultKeyboardShortcuts,
+} from '@folio/stripes/components';
 import { Settings } from '@folio/stripes/smart-components';
 import { usePaneFocus } from '@folio/stripes-acq-components';
 
@@ -24,13 +28,15 @@ const GobiIntegration = ({ ...props }) => {
   const { paneTitleRef } = usePaneFocus();
 
   return (
-    <Settings
-      {...props}
-      navPaneWidth="20%"
-      paneTitle={<FormattedMessage id="ui-gobi-settings.meta.title" />}
-      paneTitleRef={paneTitleRef}
-      sections={sections}
-    />
+    <CommandList commands={defaultKeyboardShortcuts}>
+      <Settings
+        {...props}
+        navPaneWidth="25%"
+        paneTitle={<FormattedMessage id="ui-gobi-settings.meta.title" />}
+        paneTitleRef={paneTitleRef}
+        sections={sections}
+      />
+    </CommandList>
   );
 };
 

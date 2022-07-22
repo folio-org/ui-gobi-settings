@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import { ConfigFile } from './ConfigFile';
+import { MappingView } from './MappingView';
 
 const defaultProps = {
   configFiles: [{ id: 'id', name: 'configFileName' }],
@@ -19,14 +19,14 @@ const wrapper = ({ children }) => (
 );
 
 const renderConfigFile = (props = {}) => render(
-  <ConfigFile
+  <MappingView
     {...defaultProps}
     {...props}
   />,
   { wrapper },
 );
 
-describe('ConfigFile', () => {
+describe('MappingView', () => {
   it('should render pane with config file name as title', () => {
     renderConfigFile();
 
