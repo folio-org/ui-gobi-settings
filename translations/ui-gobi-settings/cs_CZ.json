@@ -1,7 +1,7 @@
 {
     "meta.title": "Integrace GOBI",
     "configFiles": "Konfigurační soubory",
-    "integrationDetails": "Podrobnosti o integraci",
+    "integrationDetails": "Detaily integrace",
     "mappingConfig": "Konfigurace mapování",
     "permission.settings": "Integrace GOBI: zobrazení a úprava nastavení"
 }
