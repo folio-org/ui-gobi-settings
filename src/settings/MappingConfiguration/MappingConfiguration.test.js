@@ -4,6 +4,16 @@ import { MemoryRouter, withRouter } from 'react-router-dom';
 
 import { MappingConfiguration } from './MappingConfiguration';
 
+jest.mock('@folio/stripes/components', () => ({
+  ...jest.requireActual('@folio/stripes/components'),
+  Layer: jest.fn(({ children }) => <>{children}</>),
+}));
+jest.mock('../hooks', () => ({
+  ...jest.requireActual('../hooks'),
+  useOrderMappingTypes: jest.fn(() => ({ orderMappingTypes: ['test'] })),
+  useOrderMapping: jest.fn(() => ({ mapping: [] })),
+}));
+
 const defaultProps = {};
 
 // eslint-disable-next-line react/prop-types
@@ -31,25 +41,25 @@ describe('MappingConfiguration', () => {
   });
 
   describe('Actions', () => {
-    it('should render pane for configuration file when corresponding list item was clicked', async () => {
+    it('should render pane for mapping when corresponding list item was clicked', async () => {
       renderMappingConfiguration();
 
-      const listItems = screen.getAllByTestId('config-file-list-item');
+      const listItems = screen.getAllByTestId('mapping-type-list-item');
 
       await act(async () => user.click(listItems[0]));
 
-      expect(screen.getByTestId('gobi-config-file-pane')).toBeInTheDocument();
+      expect(screen.getByTestId('gobi-mapping-pane')).toBeInTheDocument();
     });
 
-    it('should close config file pane when \'Close\' icon button was clicked', async () => {
+    it('should close mapping pane when \'Close\' icon button was clicked', () => {
       renderMappingConfiguration();
 
-      const listItems = screen.getAllByTestId('config-file-list-item');
+      const listItems = screen.getAllByTestId('mapping-type-list-item');
 
-      await act(async () => user.click(listItems[0]));
-      await act(async () => user.click(screen.getByLabelText('stripes-components.closeItem')));
+      act(() => user.click(listItems[0]));
+      act(() => user.click(screen.getByLabelText('stripes-components.closeItem')));
 
-      expect(screen.queryByTestId('gobi-config-file-pane')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('gobi-mapping-pane')).not.toBeInTheDocument();
     });
   });
 });

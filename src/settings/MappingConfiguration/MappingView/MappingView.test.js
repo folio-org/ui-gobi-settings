@@ -1,13 +1,34 @@
+import user from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
+import { HasCommand } from '@folio/stripes/components';
+import {
+  useAccordionToggle,
+} from '@folio/stripes-acq-components';
+
+import { mappingConfig } from '../../../../test/jest/fixtures/mappingConfig';
+import { useOrderMapping } from '../../hooks';
 import { MappingView } from './MappingView';
 
+jest.mock('@folio/stripes/components', () => ({
+  ...jest.requireActual('@folio/stripes/components'),
+  Layer: jest.fn(({ children }) => <>{children}</>),
+  HasCommand: jest.fn(({ children }) => <>{children}</>),
+}));
+jest.mock('@folio/stripes-acq-components/lib/hooks/useAccordionToggle', () => ({
+  useAccordionToggle: jest.fn().mockReturnValue([jest.fn(), {}, jest.fn()]),
+}));
+jest.mock('../../hooks', () => ({
+  ...jest.requireActual('../../hooks'),
+  useOrderMapping: jest.fn(),
+}));
+
 const defaultProps = {
-  configFiles: [{ id: 'id', name: 'configFileName' }],
-  match: {
-    params: { id: 'id' },
+  history: {
+    push: jest.fn(),
   },
+  rootPath: '/',
   onClose: jest.fn(),
 };
 
@@ -27,9 +48,73 @@ const renderConfigFile = (props = {}) => render(
 );
 
 describe('MappingView', () => {
-  it('should render pane with config file name as title', () => {
+  beforeEach(() => {
+    useOrderMapping.mockClear().mockReturnValue(mappingConfig);
+    defaultProps.history.push.mockClear();
+    defaultProps.onClose.mockClear();
+  });
+
+  it('should render pane with order mapping', () => {
     renderConfigFile();
 
-    expect(screen.getByText(defaultProps.configFiles[0].name)).toBeInTheDocument();
+    expect(screen.getByTestId('gobi-mapping-pane')).toBeInTheDocument();
+  });
+
+  describe('Actions', () => {
+    beforeEach(() => {
+      HasCommand.mockClear();
+    });
+
+    it('should close mapping view pane when close button was clicked', () => {
+      renderConfigFile();
+
+      const closeBtn = screen.getByLabelText('stripes-components.closeItem');
+
+      user.click(closeBtn);
+
+      expect(defaultProps.onClose).toHaveBeenCalled();
+    });
+
+    it('should navigate to edit mapping form when \'Edit\' buttow was clicked in action menu', () => {
+      renderConfigFile();
+
+      const editBtn = screen.getByTestId('action-edit-mapping');
+
+      user.click(editBtn);
+
+      expect(defaultProps.history.push).toHaveBeenCalled();
+    });
+
+    it('should expand all accordions on \'expandAllSections\' shortcut', async () => {
+      const expandMock = jest.fn();
+
+      useAccordionToggle.mockClear().mockReturnValue([expandMock, {}, jest.fn()]);
+
+      renderConfigFile();
+
+      HasCommand.mock.calls[0][0].commands.find(c => c.name === 'expandAllSections').handler();
+
+      expect(expandMock).toHaveBeenCalled();
+    });
+
+    it('should collapse all accordions on \'collapseAllSections\' shortcut', async () => {
+      const collapseMock = jest.fn();
+
+      useAccordionToggle.mockClear().mockReturnValue([collapseMock, {}, jest.fn()]);
+
+      renderConfigFile();
+
+      HasCommand.mock.calls[0][0].commands.find(c => c.name === 'collapseAllSections').handler();
+
+      expect(collapseMock).toHaveBeenCalled();
+    });
+
+    it('should navigate to edit form on \'edit\' shortcut', async () => {
+      renderConfigFile();
+
+      HasCommand.mock.calls[0][0].commands.find(c => c.name === 'edit').handler();
+
+      expect(defaultProps.history.push).toHaveBeenCalled();
+    });
   });
 });
