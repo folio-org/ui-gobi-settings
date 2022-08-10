@@ -128,6 +128,7 @@
   "order.mappings.translator.lookupContributorNameTypeId": "Lookup contributions UUID",
   "order.mappings.translator.lookupExpenseClassId": "Lookup expense class UUID",
   "order.mappings.translator.lookupAcquisitionMethodIds": "Lookup acquisition method UUIDs",
+  "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
   "order.mappings.translator.lookupLocationId": "Lookup UUID of the (inventory) location record",
   "order.mappings.translator.lookupMaterialTypeId": "Lookup UUID of the material Type",
   "order.mappings.translator.lookupFundId": "Lookup fund UUID",
@@ -146,7 +147,7 @@
   "order.mappings.translator.toDate": "To date",
   "order.mappings.translator.toDouble": "To double",
   "order.mappings.translator.toInteger": "To integer",
-
+  
   "order.mappings.type.listedElectronicMonograph": "Listed Electronic Monograph",
   "order.mappings.type.listedElectronicSerial": "Listed Electronic Serial",
   "order.mappings.type.listedPrintMonograph": "Listed Print Monograph",
