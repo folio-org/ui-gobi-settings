@@ -58,6 +58,7 @@
   "order.mappings.field.discountType": "Type",
   "order.mappings.field.donor": "Donor",
   "order.mappings.field.edition": "Edition",
+  "order.mappings.field.encumbrance": "Encumbrance",
   "order.mappings.field.exchangeRate": "Set exchange rate",
   "order.mappings.field.expectedActivation": "Expected activation",
   "order.mappings.field.expectedReceiptDate": "Expected receipt date",
