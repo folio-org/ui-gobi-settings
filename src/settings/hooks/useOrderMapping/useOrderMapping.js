@@ -1,18 +1,18 @@
 import { useQuery } from 'react-query';
+import { upperFirst } from 'lodash';
 
 import {
   useNamespace,
   useOkapiKy,
 } from '@folio/stripes/core';
 
-import { mappingConfig } from '../../../../test/jest/fixtures/mappingConfig';
+import { GOBI_CUSTOM_MAPPINGS_API } from '../../constants';
 
 export const useOrderMapping = (orderMappingType) => {
   const ky = useOkapiKy();
   const [namespace] = useNamespace({ key: 'gobi-order-mapping' });
 
-  // TODO: connect with BE
-  const queryFn = () => Promise.resolve(mappingConfig);
+  const queryFn = () => ky.get(`${GOBI_CUSTOM_MAPPINGS_API}/${upperFirst(orderMappingType)}`).json();
 
   const {
     data,
@@ -28,6 +28,6 @@ export const useOrderMapping = (orderMappingType) => {
   return {
     isLoading,
     mappingType: data?.mappingType,
-    mapping: data?.mapping,
+    mappings: data?.orderMappings?.mappings || [],
   };
 };

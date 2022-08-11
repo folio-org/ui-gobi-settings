@@ -28,6 +28,7 @@ import { IfPermission, useStripes } from '@folio/stripes/core';
 
 import { MappingFieldView } from '../../components';
 import {
+  FORMATTED_ORDER_MAPPING_TYPES,
   GOBI_MAPPING_TYPES,
   INITIAL_ORDER_MAPPING_ACCORDIONS,
   ORDER_MAPPING_ACCORDIONS_TITLES,
@@ -46,10 +47,10 @@ export const MappingView = ({
   const {
     isLoading,
     mappingType,
-    mapping,
+    mappings,
   } = useOrderMapping(name);
 
-  const mappingMap = useMemo(() => keyBy(mapping, 'field'), [mapping]);
+  const mappingMap = useMemo(() => keyBy(mappings, 'field'), [mappings]);
 
   const [
     expandAll,
@@ -146,7 +147,7 @@ export const MappingView = ({
           defaultWidth="fill"
           dismissible
           onClose={onClose}
-          paneTitle={name}
+          paneTitle={FORMATTED_ORDER_MAPPING_TYPES[name]}
           paneTitleRef={paneTitleRef}
         >
           <Row center="xs">

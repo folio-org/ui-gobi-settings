@@ -1,273 +1,302 @@
 export const mappingConfig = {
   mappingType: 'Default',
-  mapping: [
-    {
-      field: 'ACQUISITION_METHOD',
-      dataSource: {
-        default: 'Purchase At Vendor System',
+  orderMappings: {
+    orderType: 'ListedElectronicMonograph',
+    mappings: [
+      {
+        field: 'ACCESS_PROVIDER',
+        dataSource: {
+          from: '//PurchaseOption/VendorPOCode',
+          translation: 'lookupOrganization',
+        },
       },
-    },
-    {
-      field: 'APPROVED',
-      dataSource: {
-        default: 'true',
-        translation: 'toBoolean',
-        translateDefault: true,
+      {
+        field: 'ACQUISITION_METHOD',
+        dataSource: {
+          default: 'Purchase At Vendor System',
+        },
       },
-    },
-    {
-      field: 'CLAIMED',
-      dataSource: {
-        default: 'true',
-        translation: 'toBoolean',
-        translateDefault: true,
+      {
+        field: 'ACTIVATED',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'false',
+        },
       },
-    },
-    {
-      field: 'COLLECTION',
-      dataSource: {
-        default: 'false',
-        translation: 'toBoolean',
-        translateDefault: true,
+      {
+        field: 'APPROVED',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'true',
+        },
       },
-    },
-    {
-      field: 'CONTRIBUTOR',
-      dataSource: {
-        from: "//datafield[@tag='100']/*",
-        combinator: 'concat',
+      {
+        field: 'CLAIMED',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'true',
+        },
       },
-    },
-    {
-      field: 'CONTRIBUTOR_NAME_TYPE',
-      dataSource: {
-        default: 'Personal name',
-        translation: 'lookupContributorNameTypeId',
-        translateDefault: true,
+      {
+        field: 'COLLECTION',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'false',
+        },
       },
-    },
-    {
-      field: 'CURRENCY',
-      dataSource: {
-        from: '//ListPrice/Currency',
-        default: 'USD',
+      {
+        field: 'CONTRIBUTOR',
+        dataSource: {
+          from: "//datafield[@tag='100']/*",
+          combinator: 'concat',
+        },
       },
-    },
-    {
-      field: 'DATE_ORDERED',
-      dataSource: {
-        from: '//OrderPlaced',
-        translation: 'toDate',
+      {
+        field: 'CONTRIBUTOR_NAME_TYPE',
+        dataSource: {
+          translation: 'lookupContributorNameTypeId',
+          translateDefault: true,
+          default: 'Personal name',
+        },
       },
-    },
-    {
-      field: 'FUND_ID',
-      dataSource: {
-        from: '//FundCode',
-        translation: 'lookupFundId',
+      {
+        field: 'CURRENCY',
+        dataSource: {
+          from: '//ListPrice/Currency',
+          default: 'USD',
+        },
       },
-    },
-    {
-      field: 'FUND_CODE',
-      dataSource: {
-        from: '//FundCode',
+      {
+        field: 'DATE_ORDERED',
+        dataSource: {
+          from: '//OrderPlaced',
+          translation: 'toDate',
+        },
       },
-    },
-    {
-      field: 'FUND_PERCENTAGE',
-      dataSource: {
-        default: '100',
-        translation: 'toDouble',
-        translateDefault: true,
+      {
+        field: 'FUND_ID',
+        dataSource: {
+          from: '//FundCode',
+          translation: 'lookupFundId',
+        },
       },
-    },
-    {
-      field: 'VENDOR_INSTRUCTIONS',
-      dataSource: {
-        from: '//OrderNotes',
-        default: 'N/A',
+      {
+        field: 'FUND_CODE',
+        dataSource: {
+          from: '//FundCode',
+        },
       },
-    },
-    {
-      field: 'LIST_UNIT_PRICE',
-      dataSource: {
-        from: '//ListPrice/Amount',
-        default: '0',
-        translation: 'toDouble',
-        translateDefault: true,
+      {
+        field: 'FUND_PERCENTAGE',
+        dataSource: {
+          translation: 'toDouble',
+          translateDefault: true,
+          default: '100',
+        },
       },
-    },
-    {
-      field: 'LOCATION',
-      dataSource: {
-        from: '//Location',
-        default: '*',
-        translation: 'lookupLocationId',
-        translateDefault: true,
+      {
+        field: 'LIST_UNIT_PRICE_ELECTRONIC',
+        dataSource: {
+          from: '//ListPrice/Amount',
+          translation: 'toDouble',
+          translateDefault: true,
+          default: '0',
+        },
       },
-    },
-    {
-      field: 'MANUAL_PO',
-      dataSource: {
-        default: 'false',
-        translation: 'toBoolean',
-        translateDefault: true,
+      {
+        field: 'LOCATION',
+        dataSource: {
+          from: '//Location',
+          translation: 'lookupLocationId',
+          translateDefault: true,
+          default: '*',
+        },
       },
-    },
-    {
-      field: 'ORDER_TYPE',
-      dataSource: {
-        default: 'One-Time',
+      {
+        field: 'MANUAL_PO',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'false',
+        },
       },
-    },
-    {
-      field: 'PO_LINE_ORDER_FORMAT',
-      dataSource: {
-        default: 'Physical Resource',
+      {
+        field: 'MATERIAL_TYPE',
+        dataSource: {
+          from: "//LocalData[Description='LocalData1']/Value",
+          translation: 'lookupMaterialTypeId',
+          translateDefault: true,
+          default: 'unspecified',
+        },
       },
-    },
-    {
-      field: 'PO_LINE_PAYMENT_STATUS',
-      dataSource: {
-        default: 'Awaiting Payment',
+      {
+        field: 'NOTE_FROM_VENDOR',
+        dataSource: {
+          from: '//PurchaseOption/VendorCode',
+        },
       },
-    },
-    {
-      field: 'PO_LINE_RECEIPT_STATUS',
-      dataSource: {
-        default: 'Awaiting Receipt',
+      {
+        field: 'ORDER_TYPE',
+        dataSource: {
+          default: 'One-Time',
+        },
       },
-    },
-    {
-      field: 'PRODUCT_ID',
-      dataSource: {
-        from: "//datafield[@tag='020']/subfield[@code='a']",
-        translation: 'truncateISBNQualifier',
+      {
+        field: 'PO_LINE_ORDER_FORMAT',
+        dataSource: {
+          default: 'Electronic Resource',
+        },
       },
-    },
-    {
-      field: 'PRODUCT_ID_TYPE',
-      dataSource: {
-        default: 'ISBN',
-        translation: 'lookupProductIdType',
-        translateDefault: true,
+      {
+        field: 'PO_LINE_PAYMENT_STATUS',
+        dataSource: {
+          default: 'Awaiting Payment',
+        },
       },
-    },
-    {
-      field: 'PRODUCT_QUALIFIER',
-      dataSource: {
-        from: "//datafield[@tag='020']/subfield[@code='q']",
-        defaultMapping: {
-          dataSource: {
-            from: "//datafield[@tag='020']/subfield[@code='a']",
-            translation: 'separateISBNQualifier',
+      {
+        field: 'PO_LINE_RECEIPT_STATUS',
+        dataSource: {
+          default: 'Receipt Not Required',
+        },
+      },
+      {
+        field: 'PRODUCT_ID',
+        dataSource: {
+          from: "//datafield[@tag='020']/subfield[@code='a']",
+          translation: 'truncateISBNQualifier',
+        },
+      },
+      {
+        field: 'PRODUCT_ID_TYPE',
+        dataSource: {
+          translation: 'lookupProductIdType',
+          translateDefault: true,
+          default: 'ISBN',
+        },
+      },
+      {
+        field: 'PRODUCT_QUALIFIER',
+        dataSource: {
+          from: "//datafield[@tag='020']/subfield[@code='q']",
+          defaultMapping: {
+            dataSource: {
+              from: "//datafield[@tag='020']/subfield[@code='a']",
+              translation: 'separateISBNQualifier',
+            },
           },
         },
       },
-    },
-    {
-      field: 'PUBLICATION_DATE',
-      dataSource: {
-        from: "//datafield[@tag='260']/subfield[@code='c']",
+      {
+        field: 'PUBLICATION_DATE',
+        dataSource: {
+          from: "//datafield[@tag='260']/subfield[@code='c']",
+        },
       },
-    },
-    {
-      field: 'PUBLISHER',
-      dataSource: {
-        from: "//datafield[@tag='260']/subfield[@code='b']",
+      {
+        field: 'PUBLISHER',
+        dataSource: {
+          from: "//datafield[@tag='260']/subfield[@code='b']",
+        },
       },
-    },
-    {
-      field: 'QUANTITY_PHYSICAL',
-      dataSource: {
-        from: '//Quantity',
-        default: '1',
-        translation: 'toInteger',
+      {
+        field: 'QUANTITY_ELECTRONIC',
+        dataSource: {
+          from: '//Quantity',
+          translation: 'toInteger',
+          default: '1',
+        },
       },
-    },
-    {
-      field: 'SOURCE',
-      dataSource: {
-        default: 'API',
+      {
+        field: 'RECEIVING_NOTE',
+        dataSource: {
+          from: "//LocalData[Description='LocalData2']/Value",
+        },
       },
-    },
-    {
-      field: 'TITLE',
-      dataSource: {
-        from: "//datafield[@tag='245']/*",
-        combinator: 'concat',
+      {
+        field: 'REQUESTER',
+        dataSource: {
+          from: "//LocalData[Description='LocalData3']/Value",
+        },
       },
-    },
-    {
-      field: 'VENDOR',
-      dataSource: {
-        default: 'GOBI',
-        translation: 'lookupOrganization',
-        translateDefault: true,
+      {
+        field: 'SOURCE',
+        dataSource: {
+          default: 'API',
+        },
       },
-    },
-    {
-      field: 'MATERIAL_SUPPLIER',
-      dataSource: {
-        default: 'GOBI',
-        translation: 'lookupOrganization',
-        translateDefault: true,
+      {
+        field: 'TAGS',
+        dataSource: {
+          from: "//LocalData[Description='LocalData4']/Value",
+        },
       },
-    },
-    {
-      field: 'VENDOR_ACCOUNT',
-      dataSource: {
-        from: '//SubAccount',
-        default: '0',
+      {
+        field: 'TITLE',
+        dataSource: {
+          from: "//datafield[@tag='245']/*",
+          combinator: 'concat',
+        },
       },
-    },
-    {
-      field: 'VENDOR_REF_NO',
-      dataSource: {
-        from: '//YBPOrderKey',
+      {
+        field: 'TRIAL',
+        dataSource: {
+          translation: 'toBoolean',
+          translateDefault: true,
+          default: 'false',
+        },
       },
-    },
-    {
-      field: 'VENDOR_REF_NO_TYPE',
-      dataSource: {
-        default: 'Vendor order reference number',
+      {
+        field: 'VENDOR',
+        dataSource: {
+          translation: 'lookupOrganization',
+          translateDefault: true,
+          default: 'GOBI',
+        },
       },
-    },
-    {
-      field: 'WORKFLOW_STATUS',
-      dataSource: {
-        default: 'Open',
+      {
+        field: 'MATERIAL_SUPPLIER',
+        dataSource: {
+          translation: 'lookupOrganization',
+          translateDefault: true,
+          default: 'GOBI',
+        },
       },
-    },
-    {
-      field: 'MATERIAL_TYPE',
-      dataSource: {
-        from: "//LocalData[Description='LocalData1']/Value",
-        default: 'unspecified',
-        translation: 'lookupMaterialTypeId',
-        translateDefault: true,
+      {
+        field: 'VENDOR_ACCOUNT',
+        dataSource: {
+          from: '//SubAccount',
+          default: '0',
+        },
       },
-    },
-    {
-      field: 'LINKED_PACKAGE',
-      dataSource: {
-        from: "//LocalData[Description='LocalData2']/Value",
-        translation: 'lookupLinkedPackage',
+      {
+        field: 'VENDOR_INSTRUCTIONS',
+        dataSource: {
+          from: '//OrderNotes',
+          default: 'N/A',
+        },
       },
-    },
-    {
-      field: 'SHIP_TO',
-      dataSource: {
-        from: "//LocalData[Description='LocalData3']/Value",
-        translation: 'lookupConfigAddress',
+      {
+        field: 'VENDOR_REF_NO',
+        dataSource: {
+          from: '//YBPOrderKey',
+        },
       },
-    },
-    {
-      field: 'PREFIX',
-      dataSource: {
-        from: "//LocalData[Description='LocalData4']/Value",
-        translation: 'lookupPrefix',
+      {
+        field: 'VENDOR_REF_NO_TYPE',
+        dataSource: {
+          default: 'Vendor order reference number',
+        },
       },
-    },
-  ],
+      {
+        field: 'WORKFLOW_STATUS',
+        dataSource: {
+          default: 'Open',
+        },
+      },
+    ],
+  },
 };

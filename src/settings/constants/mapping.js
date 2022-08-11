@@ -6,12 +6,12 @@ export const GOBI_MAPPING_TYPES = {
 };
 
 export const FORMATTED_ORDER_MAPPING_TYPES = {
-  ListedElectronicMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedElectronicMonograph" />,
-  ListedElectronicSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedElectronicSerial" />,
-  ListedPrintMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedPrintMonograph" />,
-  ListedPrintSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedPrintSerial" />,
-  UnlistedPrintMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.unlistedPrintMonograph" />,
-  UnlistedPrintSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.unlistedPrintSerial" />,
+  listedElectronicMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedElectronicMonograph" />,
+  listedElectronicSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedElectronicSerial" />,
+  listedPrintMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedPrintMonograph" />,
+  listedPrintSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.listedPrintSerial" />,
+  unlistedPrintMonograph: <FormattedMessage id="ui-gobi-settings.order.mappings.type.unlistedPrintMonograph" />,
+  unlistedPrintSerial: <FormattedMessage id="ui-gobi-settings.order.mappings.type.unlistedPrintSerial" />,
 };
 
 export const FORMATTED_TRANSLATORS = {

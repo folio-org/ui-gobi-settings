@@ -26,7 +26,7 @@ export const MappingsList = ({ history, match }) => {
             key={type}
             onClick={() => history.push(`${match.path}/${camelCase(type)}/view`)}
           >
-            {FORMATTED_ORDER_MAPPING_TYPES[type]}
+            {FORMATTED_ORDER_MAPPING_TYPES[camelCase(type)]}
           </NavListItem>
         ))}
       </NavList>

@@ -5,7 +5,6 @@ import { FIELDS } from './mapping';
 export const ORDER_MAPPING_ACCORDIONS = {
   poInfo: 'poInfo',
   poOngoing: 'poOngoing',
-  poTags: 'poTags',
   poSummary: 'poSummary',
   poNotes: 'poNotes',
   itemDetails: 'itemDetails',
@@ -16,14 +15,13 @@ export const ORDER_MAPPING_ACCORDIONS = {
   location: 'location',
   physical: 'physical',
   eresources: 'eresources',
-  other: 'other',
   polTags: 'polTags',
   ongoingOrder: 'ongoingOrder',
+  relatedAgreements: 'relatedAgreements',
 };
 
 export const ORDER_MAPPING_ACCORDIONS_TITLES = {
   [ORDER_MAPPING_ACCORDIONS.poInfo]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.poInfo" />,
-  [ORDER_MAPPING_ACCORDIONS.poTags]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.poTags" />,
   [ORDER_MAPPING_ACCORDIONS.poSummary]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.poSummary" />,
   [ORDER_MAPPING_ACCORDIONS.poOngoing]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.poOngoing" />,
   [ORDER_MAPPING_ACCORDIONS.poNotes]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.poNotes" />,
@@ -35,19 +33,15 @@ export const ORDER_MAPPING_ACCORDIONS_TITLES = {
   [ORDER_MAPPING_ACCORDIONS.fundDistribution]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polFundDistribution" />,
   [ORDER_MAPPING_ACCORDIONS.eresources]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polEResources" />,
   [ORDER_MAPPING_ACCORDIONS.physical]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polFResources" />,
-  [ORDER_MAPPING_ACCORDIONS.other]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polOtherResources" />,
   [ORDER_MAPPING_ACCORDIONS.location]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polLocation" />,
   [ORDER_MAPPING_ACCORDIONS.polTags]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.polTags" />,
+  [ORDER_MAPPING_ACCORDIONS.relatedAgreements]: <FormattedMessage id="ui-gobi-settings.order.mappings.accordion.relatedAgreements" />,
 };
 
 export const INITIAL_ORDER_MAPPING_ACCORDIONS = Object.keys(ORDER_MAPPING_ACCORDIONS).reduce((acc, key) => ({
   ...acc,
   [key]: false,
 }), {});
-
-export const ORDER_MAPPING_FIELDS = {
-
-};
 
 export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
   [ORDER_MAPPING_ACCORDIONS.poInfo]: [
@@ -61,12 +55,13 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.LOOKUP_ACQUISITION_UNIT_DEFAULT_ACQ_UNIT_NAME,
     FIELDS.MANUAL_PO,
     FIELDS.RE_ENCUMBER,
-  ],
-  [ORDER_MAPPING_ACCORDIONS.poTags]: [
-    FIELDS.TAGS,
+    FIELDS.DATE_ORDERED,
   ],
   [ORDER_MAPPING_ACCORDIONS.poSummary]: [
+    FIELDS.TOTAL_ITEMS,
+    FIELDS.TOTAL_ESTIMATED_PRICE,
     FIELDS.APPROVED,
+    FIELDS.WORKFLOW_STATUS,
   ],
   [ORDER_MAPPING_ACCORDIONS.poOngoing]: [
     FIELDS.ONGOING_IS_SUBSCRIPTION,
@@ -84,7 +79,6 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.PACKAGE_DESIGNATION,
     FIELDS.TITLE,
     FIELDS.RECEIVING_NOTE,
-    // Must acknowledge receiving note
     FIELDS.SUBSCRIPTION_FROM,
     FIELDS.SUBSCRIPTION_TO,
     FIELDS.SUBSCRIPTION_INTERVAL,
@@ -100,8 +94,8 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.DESCRIPTION,
   ],
   [ORDER_MAPPING_ACCORDIONS.lineDetails]: [
+    FIELDS.PURCHASE_ORDER_ID,
     FIELDS.ACQUISITION_METHOD,
-    // Automatic export
     FIELDS.PO_LINE_ORDER_FORMAT,
     FIELDS.RECEIPT_DATE,
     FIELDS.PO_LINE_RECEIPT_STATUS,
@@ -115,9 +109,7 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.COLLECTION,
     FIELDS.RECEIVING_WORKFLOW,
     FIELDS.PO_LINE_DESCRIPTION,
-  ],
-  [ORDER_MAPPING_ACCORDIONS.ongoingOrder]: [
-    // renewalNote;
+    FIELDS.SOURCE,
   ],
   [ORDER_MAPPING_ACCORDIONS.costDetails]: [
     FIELDS.LIST_UNIT_PRICE,
@@ -129,6 +121,7 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.LIST_UNIT_PRICE_ELECTRONIC,
     FIELDS.DISCOUNT,
     FIELDS.DISCOUNT_TYPE,
+    FIELDS.PO_LINE_ESTIMATED_PRICE,
   ],
   [ORDER_MAPPING_ACCORDIONS.vendor]: [
     FIELDS.VENDOR_REF_NO,
@@ -138,26 +131,13 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
   ],
   [ORDER_MAPPING_ACCORDIONS.fundDistribution]: [
     FIELDS.FUND_ID,
+    FIELDS.FUND_CODE,
     FIELDS.EXPENSE_CLASS,
-    // value
     FIELDS.FUND_PERCENTAGE,
+    FIELDS.ENCUMBRANCE,
   ],
   [ORDER_MAPPING_ACCORDIONS.location]: [
     FIELDS.LOCATION,
-    // quantity p
-    // quantity e
-  ],
-  [ORDER_MAPPING_ACCORDIONS.eresources]: [
-    FIELDS.ACCESS_PROVIDER,
-    // material type
-    FIELDS.ACTIVATION_DUE,
-    FIELDS.EXPECTED_ACTIVATION,
-    // create inventory
-    FIELDS.EXPECTED_ACTIVATION,
-    FIELDS.USER_LIMIT,
-    FIELDS.ACTIVATED,
-    FIELDS.TRIAL,
-    FIELDS.URL,
   ],
   [ORDER_MAPPING_ACCORDIONS.physical]: [
     FIELDS.MATERIAL_SUPPLIER,
@@ -167,14 +147,20 @@ export const ORDER_MAPPING_FIELDS_ACCORDIONS_MAP = {
     FIELDS.MATERIAL_TYPE,
     FIELDS.VOLUMES,
   ],
-  [ORDER_MAPPING_ACCORDIONS.other]: [
-    // material supplier
-    // FIELDS.RECEIPT_DUE,
-    // FIELDS.EXPECTED_RECEIPT_DATE,
-    // FIELDS.CREATE_INVENTORY,
-    // FIELDS.MATERIAL_TYPE,
+  [ORDER_MAPPING_ACCORDIONS.eresources]: [
+    FIELDS.ACCESS_PROVIDER,
+    FIELDS.ACTIVATION_DUE,
+    FIELDS.EXPECTED_ACTIVATION,
+    FIELDS.EXPECTED_ACTIVATION,
+    FIELDS.USER_LIMIT,
+    FIELDS.ACTIVATED,
+    FIELDS.TRIAL,
+    FIELDS.URL,
   ],
   [ORDER_MAPPING_ACCORDIONS.polTags]: [
     FIELDS.TAGS,
+  ],
+  [ORDER_MAPPING_ACCORDIONS.relatedAgreements]: [
+    FIELDS.AGGREMENT_ID,
   ],
 };

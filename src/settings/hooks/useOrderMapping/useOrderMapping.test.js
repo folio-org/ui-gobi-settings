@@ -31,6 +31,6 @@ describe('useOrderMapping', () => {
 
     await waitFor(() => !result.current.isLoading);
 
-    expect(result.current.mapping).toEqual(mappingConfig.mapping);
+    expect(result.current.mappings).toEqual(mappingConfig.orderMappings.mappings);
   });
 });
