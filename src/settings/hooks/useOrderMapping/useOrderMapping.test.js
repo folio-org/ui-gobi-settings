@@ -21,7 +21,7 @@ describe('useOrderMapping', () => {
       .mockClear()
       .mockReturnValue({
         get: () => ({
-          json: () => Promise.resolve(Object.keys(mappingConfig)),
+          json: () => Promise.resolve(mappingConfig),
         }),
       });
   });
