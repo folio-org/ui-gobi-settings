@@ -1,8 +1,12 @@
 {
   "meta.title": "GOBI integration",
 
+  "actions.restore.confirm": "Confirm",
+  "actions.restore.heading": "Reset default configuration",
+  "actions.restore.message": "Resetting this configuration will delete all customizations and restore the default configuration file mappings",
+
   "button.edit": "Edit",
-  
+
   "configFiles": "Configuration Files",
   "integrationDetails": "Integration Details",
   "mappingConfig": "Mapping Configuration",
@@ -144,13 +148,16 @@
   "order.mappings.translator.toDate": "To date",
   "order.mappings.translator.toDouble": "To double",
   "order.mappings.translator.toInteger": "To integer",
-  
+
   "order.mappings.type.listedElectronicMonograph": "Listed Electronic Monograph",
   "order.mappings.type.listedElectronicSerial": "Listed Electronic Serial",
   "order.mappings.type.listedPrintMonograph": "Listed Print Monograph",
   "order.mappings.type.listedPrintSerial": "Listed Print Serial",
   "order.mappings.type.unlistedPrintMonograph": "Unlisted Print Monograph",
-  "order.mappings.type.unlistedPrintSerial": "Unlisted Print Serial",  
+  "order.mappings.type.unlistedPrintSerial": "Unlisted Print Serial",
+
+  "restore.success": "The default configuration was restored",
+  "restore.error": "The default configuration was not restored",
 
   "settings": "GOBI Integration settings",
 

@@ -17,6 +17,7 @@ export const useOrderMapping = (orderMappingType) => {
   const {
     data,
     isLoading,
+    refetch,
   } = useQuery(
     [namespace],
     queryFn,
@@ -29,5 +30,6 @@ export const useOrderMapping = (orderMappingType) => {
     isLoading,
     mappingType: data?.mappingType,
     mappings: data?.orderMappings?.mappings || [],
+    refetch,
   };
 };

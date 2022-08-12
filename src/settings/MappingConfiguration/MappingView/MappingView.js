@@ -10,6 +10,7 @@ import {
   Button,
   checkScope,
   Col,
+  ConfirmationModal,
   ExpandAllButton,
   HasCommand,
   Icon,
@@ -21,7 +22,9 @@ import {
 import {
   handleKeyCommand,
   useAccordionToggle,
+  useModalToggle,
   usePaneFocus,
+  useShowCallout,
 } from '@folio/stripes-acq-components';
 
 import { IfPermission, useStripes } from '@folio/stripes/core';
@@ -34,7 +37,10 @@ import {
   ORDER_MAPPING_ACCORDIONS_TITLES,
   ORDER_MAPPING_FIELDS_ACCORDIONS_MAP,
 } from '../../constants';
-import { useOrderMapping } from '../../hooks';
+import {
+  useOrderMapping,
+  useOrderMappingTypeMutation,
+} from '../../hooks';
 
 export const MappingView = ({
   history,
@@ -43,12 +49,16 @@ export const MappingView = ({
 }) => {
   const stripes = useStripes();
   const { name } = useParams();
+
   const { paneTitleRef } = usePaneFocus();
+  const [isRestoreConfirmation, toggleRestoreConfirmation] = useModalToggle();
   const {
     isLoading,
     mappingType,
     mappings,
+    refetch,
   } = useOrderMapping(name);
+  const showCallout = useShowCallout();
 
   const mappingMap = useMemo(() => keyBy(mappings, 'field'), [mappings]);
 
@@ -58,9 +68,29 @@ export const MappingView = ({
     toggleSection,
   ] = useAccordionToggle(INITIAL_ORDER_MAPPING_ACCORDIONS);
 
+  const { restoreMappingConfig } = useOrderMappingTypeMutation();
+
   const onEdit = useCallback(() => {
     history.push(`${rootPath}/${name}/edit`);
   }, [history, name, rootPath]);
+
+  const onRestoreDefault = useCallback(async () => {
+    toggleRestoreConfirmation();
+    restoreMappingConfig(name)
+      .then(() => {
+        refetch();
+
+        showCallout({
+          message: <FormattedMessage id="ui-gobi-settings.restore.success" />,
+        });
+      })
+      .catch(() => {
+        showCallout({
+          message: <FormattedMessage id="ui-gobi-settings.restore.error" />,
+          type: 'error',
+        });
+      });
+  }, [restoreMappingConfig, refetch, showCallout, name, toggleRestoreConfirmation]);
 
   const shortcuts = [
     {
@@ -103,9 +133,8 @@ export const MappingView = ({
                 data-testid="action-restore-default-mapping"
                 buttonStyle="dropdownItem"
                 onClick={() => {
-                  // TODO: connect with API
-                  console.log('restoreDefaultConfig button clicked');
                   onToggle();
+                  toggleRestoreConfirmation();
                 }}
               >
                 <Icon icon="trash">
@@ -117,7 +146,7 @@ export const MappingView = ({
         }
       </>
     );
-  }, [mappingType, onEdit]);
+  }, [mappingType, onEdit, toggleRestoreConfirmation]);
 
   if (isLoading) {
     return (
@@ -193,6 +222,18 @@ export const MappingView = ({
               </AccordionSet>
             </Col>
           </Row>
+
+          {isRestoreConfirmation && (
+            <ConfirmationModal
+              id="order-mapping-type-restore-confirmation"
+              confirmLabel={<FormattedMessage id="ui-gobi-settings.actions.restore.confirm" />}
+              heading={<FormattedMessage id="ui-gobi-settings.actions.restore.heading" />}
+              message={<FormattedMessage id="ui-gobi-settings.actions.restore.message" />}
+              onCancel={toggleRestoreConfirmation}
+              onConfirm={onRestoreDefault}
+              open
+            />
+          )}
 
         </Pane>
       </HasCommand>

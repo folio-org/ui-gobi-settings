@@ -1,6 +1,7 @@
 import user from '@testing-library/user-event';
 import { act, render, screen } from '@testing-library/react';
 import { MemoryRouter, withRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { MappingConfiguration } from './MappingConfiguration';
 
@@ -16,10 +17,13 @@ jest.mock('../hooks', () => ({
 
 const defaultProps = {};
 
-// eslint-disable-next-line react/prop-types
+const queryClient = new QueryClient();
+
 const wrapper = ({ children }) => (
   <MemoryRouter>
-    {children}
+    <QueryClientProvider client={queryClient}>
+      {children}
+    </QueryClientProvider>
   </MemoryRouter>
 );
 

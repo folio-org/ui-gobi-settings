@@ -1,6 +1,7 @@
 import user from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { HasCommand } from '@folio/stripes/components';
 import {
@@ -22,6 +23,7 @@ jest.mock('@folio/stripes-acq-components/lib/hooks/useAccordionToggle', () => ({
 jest.mock('../../hooks', () => ({
   ...jest.requireActual('../../hooks'),
   useOrderMapping: jest.fn(),
+  useOrderMappingTypeMutation: () => jest.fn().mockReturnValue({ restoreMappingConfig: jest.fn() }),
 }));
 
 const defaultProps = {
@@ -32,10 +34,13 @@ const defaultProps = {
   onClose: jest.fn(),
 };
 
-// eslint-disable-next-line react/prop-types
+const queryClient = new QueryClient();
+
 const wrapper = ({ children }) => (
   <MemoryRouter>
-    {children}
+    <QueryClientProvider client={queryClient}>
+      {children}
+    </QueryClientProvider>
   </MemoryRouter>
 );
 
@@ -75,7 +80,7 @@ describe('MappingView', () => {
       expect(defaultProps.onClose).toHaveBeenCalled();
     });
 
-    it('should navigate to edit mapping form when \'Edit\' buttow was clicked in action menu', () => {
+    it('should navigate to edit mapping form when \'Edit\' button was clicked in action menu', () => {
       renderConfigFile();
 
       const editBtn = screen.getByTestId('action-edit-mapping');
