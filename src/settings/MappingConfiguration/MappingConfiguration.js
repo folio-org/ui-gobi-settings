@@ -1,62 +1,59 @@
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
-import { Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
+
+import { PermissionedRoute } from '@folio/stripes-acq-components';
 
 import {
-  NavList,
-  NavListItem,
-  Pane,
-} from '@folio/stripes/components';
-import { usePaneFocus } from '@folio/stripes-acq-components';
-
-import { ConfigFile } from './ConfigFile';
+  MAPPING_CONFIGS_RETURN_LINK,
+  MAPPING_CONFIGS_RETURN_LABEL_ID,
+  SETTINGS_RETURN_LINK,
+} from '../constants';
+import { MappingView } from './MappingView';
+import { MappingsList } from './MappingsList';
 
 export const MappingConfiguration = ({ history, match }) => {
-  const { paneTitleRef } = usePaneFocus();
-
-  // TODO: replace stub with actual data
-  const configFiles = [
-    {
-      id: '1',
-      name: 'Config file 1',
-    },
-    {
-      id: '2',
-      name: 'Config file 2',
-    },
-  ];
+  const { path } = match;
 
   return (
-    <>
-      <Pane
-        id="pane-gobi-mapping-configuration"
-        defaultWidth="15%"
-        paneTitle={<FormattedMessage id="ui-gobi-settings.configFiles" />}
-        paneTitleRef={paneTitleRef}
+    <Switch>
+      <PermissionedRoute
+        exact
+        path={path}
+        perm="ui-gobi-settings.permission.settings"
+        returnLink={SETTINGS_RETURN_LINK}
+        returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
       >
-        <NavList>
-          {configFiles.map(({ id, name }) => (
-            <NavListItem
-              data-testid="config-file-list-item"
-              key={id}
-              onClick={() => history.push(`${match.path}/${id}`)}
-            >
-              {name}
-            </NavListItem>
-          ))}
-        </NavList>
-      </Pane>
-      <Route
-        path={`${match.path}/:id`}
-        render={props => (
-          <ConfigFile
-            {...props}
-            configFiles={configFiles}
-            onClose={() => history.push(match.path)}
-          />
-        )}
-      />
-    </>
+        <MappingsList
+          history={history}
+          match={match}
+        />
+      </PermissionedRoute>
+
+      <PermissionedRoute
+        exact
+        path={`${path}/:name/view`}
+        perm="ui-gobi-settings.permission.settings"
+        returnLink={MAPPING_CONFIGS_RETURN_LINK}
+        returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
+      >
+        <MappingView
+          history={history}
+          match={match}
+          onClose={() => history.push(path)}
+          rootPath={match.path}
+        />
+      </PermissionedRoute>
+
+      <PermissionedRoute
+        exact
+        path={`${path}/:name/edit`}
+        perm="ui-gobi-settings.permission.settings"
+        returnLink={MAPPING_CONFIGS_RETURN_LINK}
+        returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
+      >
+        <p>Edit form</p>
+      </PermissionedRoute>
+    </Switch>
   );
 };
 
