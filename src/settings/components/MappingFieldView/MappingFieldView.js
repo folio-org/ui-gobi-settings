@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 import {
@@ -10,7 +11,7 @@ import {
 
 import { MappingFieldCard } from '../MappingFieldCard';
 
-export const MappingFieldView = ({
+const MappingFieldViewComponent = ({
   dataSource = {},
   name,
 }) => {
@@ -44,14 +45,19 @@ export const MappingFieldView = ({
         <Col xs={6} md={3}>
           <KeyValue
             label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.translator" />}
-            value={dataSource.translation}
+            value={dataSource.translation && (
+              <FormattedMessage
+                id={`ui-gobi-settings.order.mappings.translator.${dataSource.translation}`}
+                defaultMessage={dataSource.translation}
+              />
+            )}
           />
         </Col>
 
         <Col xs={6} md={3}>
           <Checkbox
             label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.translateDefault" />}
-            checked={dataSource.translateDefault}
+            checked={Boolean(dataSource.translateDefault)}
             disabled
             vertical
           />
@@ -61,7 +67,9 @@ export const MappingFieldView = ({
   );
 };
 
-MappingFieldView.propTypes = {
+MappingFieldViewComponent.propTypes = {
   dataSource: PropTypes.object,
   name: PropTypes.string.isRequired,
 };
+
+export const MappingFieldView = memo(MappingFieldViewComponent);
