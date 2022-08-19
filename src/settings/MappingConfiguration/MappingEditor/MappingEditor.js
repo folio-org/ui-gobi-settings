@@ -8,13 +8,11 @@ import {
   LoadingPane,
 } from '@folio/stripes/components';
 import {
-  useAccordionToggle,
   useShowCallout,
 } from '@folio/stripes-acq-components';
 
 import {
   FORMATTED_ORDER_MAPPING_TYPES,
-  INITIAL_ORDER_MAPPING_ACCORDIONS,
 } from '../../constants';
 import {
   useOrderMapping,
