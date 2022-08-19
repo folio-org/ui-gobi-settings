@@ -8,6 +8,7 @@ import {
   MAPPING_CONFIGS_RETURN_LABEL_ID,
   SETTINGS_RETURN_LINK,
 } from '../constants';
+import { MappingEditor } from './MappingEditor';
 import { MappingView } from './MappingView';
 import { MappingsList } from './MappingsList';
 
@@ -51,7 +52,11 @@ export const MappingConfiguration = ({ history, match }) => {
         returnLink={MAPPING_CONFIGS_RETURN_LINK}
         returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
       >
-        <p>Edit form</p>
+        <MappingEditor
+          history={history}
+          match={match}
+          rootPath={match.path}
+        />
       </PermissionedRoute>
     </Switch>
   );

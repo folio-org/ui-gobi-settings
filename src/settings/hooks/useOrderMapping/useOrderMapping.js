@@ -19,7 +19,7 @@ export const useOrderMapping = (orderMappingType) => {
     isLoading,
     refetch,
   } = useQuery(
-    [namespace],
+    [namespace, orderMappingType],
     queryFn,
     {
       enabled: Boolean(orderMappingType),

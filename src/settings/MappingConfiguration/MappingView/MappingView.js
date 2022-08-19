@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useCallback, useMemo } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import { keyBy, mapValues } from 'lodash';
 
@@ -47,6 +47,7 @@ export const MappingView = ({
   rootPath,
   onClose,
 }) => {
+  const intl = useIntl();
   const stripes = useStripes();
   const { name } = useParams();
 
@@ -61,6 +62,7 @@ export const MappingView = ({
   const showCallout = useShowCallout();
 
   const mappingMap = useMemo(() => keyBy(mappings, 'field'), [mappings]);
+  const contentLabel = intl.formatMessage({ id: 'ui-gobi-settings.mappingConfig' });
 
   const [
     expandAll,
@@ -150,7 +152,7 @@ export const MappingView = ({
 
   if (isLoading) {
     return (
-      <Layer isOpen>
+      <Layer isOpen contentLabel={contentLabel}>
         <LoadingPane
           dismissible
           onClose={onClose}
@@ -161,7 +163,7 @@ export const MappingView = ({
 
   return (
     <Layer
-      contentLabel="Mapping configuration"
+      contentLabel={contentLabel}
       isOpen
     >
       <HasCommand
