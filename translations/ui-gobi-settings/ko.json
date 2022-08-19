@@ -27,10 +27,10 @@
     "order.mappings.accordion.relatedAgreements": "Related agreements",
     "order.mappings.action.restoreDefaultConfig": "Restore default configuration",
     "order.mappings.field.dataSource.defaultValue": "Default value",
-    "order.mappings.field.dataSource.fromFieldName": "From field name",
-    "order.mappings.field.dataSource.fromFieldPath": "From field path",
+    "order.mappings.field.dataSource.fromFieldName": "From field",
+    "order.mappings.field.dataSource.fromFieldPath": "Path",
     "order.mappings.field.dataSource.translateDefault": "Translate default",
-    "order.mappings.field.dataSource.translator": "Translator",
+    "order.mappings.field.dataSource.translator": "Translation",
     "order.mappings.field.accessProvider": "Access provider",
     "order.mappings.field.acquisitionMethod": "Acquisition method",
     "order.mappings.field.aggrementId": "Agreement ID",
@@ -149,5 +149,9 @@
     "order.mappings.type.unlistedPrintSerial": "Unlisted Print Serial",
     "restore.success": "The default configuration was restored",
     "restore.error": "The default configuration was not restored",
-    "settings": "GOBI Integration settings"
+    "settings": "GOBI Integration settings",
+    "mappingConfig.edit.paneTitle": "Edit {name}",
+    "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
+    "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account"
 }
