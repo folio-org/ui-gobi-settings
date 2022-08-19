@@ -32,6 +32,7 @@ import { MappingFormFooter } from './MappingFormFooter';
 const MappingForm = ({
   accordionStatus,
   expandAll,
+  form: { change },
   handleSubmit,
   onCancel,
   pristine,
@@ -44,8 +45,8 @@ const MappingForm = ({
   const { name } = useParams();
   const { paneTitleRef } = usePaneFocus();
 
-  const translatorOptions = useMemo(() => getTranslatorOptions(intl, translators), [translators]);
-  
+  const translatorOptions = useMemo(() => getTranslatorOptions(intl, translators), [intl, translators]);
+
   const shortcuts = [
     {
       name: 'cancel',
@@ -73,7 +74,7 @@ const MappingForm = ({
         name: FORMATTED_ORDER_MAPPING_TYPES[name],
       }}
     />
-  )
+  );
 
   const formFooter = useMemo(() => (
     <MappingFormFooter
@@ -97,6 +98,7 @@ const MappingForm = ({
                 key={`${accordionId}-${fieldName}-${indx}`}
                 name={fieldName}
                 field={values[fieldName]}
+                change={change}
                 translatorOptions={translatorOptions}
               />
             ))}
@@ -104,7 +106,7 @@ const MappingForm = ({
         </Row>
       </Accordion>
     ))
-  ), [values, translatorOptions]);
+  ), [change, translatorOptions, values]);
 
   return (
     <HasCommand
@@ -153,6 +155,7 @@ const MappingForm = ({
 MappingForm.propTypes = {
   accordionStatus: PropTypes.object.isRequired,
   expandAll: PropTypes.func.isRequired,
+  form: PropTypes.object,
   handleSubmit: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
   pristine: PropTypes.bool,
@@ -163,8 +166,6 @@ MappingForm.propTypes = {
 };
 
 export default stripesForm({
-  enableReinitialize: true,
-  keepDirtyOnReinitialize: true,
   navigationCheck: true,
   subscription: { values: true },
 })(MappingForm);

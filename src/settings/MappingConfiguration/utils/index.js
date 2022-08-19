@@ -1,2 +1,2 @@
-export * from './dataOptions';
+export * from './getTranslatorOptions';
 export * from './mappings';

@@ -1,24 +1,22 @@
 import PropTypes from 'prop-types';
 
-import {
-  FieldSelectionFinal,
-} from '@folio/stripes-acq-components';
+import { Field } from 'react-final-form';
+import { FormattedMessage } from 'react-intl';
+import { TextField } from '@folio/stripes/components';
 
 export const FieldFromFieldName = ({
   name,
-  dataOptions = [],
 }) => {
   return (
-    <FieldSelectionFinal
+    <Field
       name={name}
+      component={TextField}
       id={`from-field-name-${name}`}
-      labelId="ui-gobi-settings.order.mappings.field.dataSource.fromFieldName"
-      dataOptions={dataOptions}
+      label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldName" />}
     />
   );
 };
 
 FieldFromFieldName.propTypes = {
-  dataOptions: PropTypes.arrayOf(PropTypes.object),
   name: PropTypes.string.isRequired,
 };

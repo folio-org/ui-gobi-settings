@@ -19,13 +19,13 @@ import {
 import {
   useOrderMapping,
   useOrderMappingTypeMutation,
+  useTranslators,
 } from '../../hooks';
 import { MappingForm } from '../MappingForm';
 import {
   formValuesToMappings,
   mappingsToFormValues,
 } from '../utils';
-import { useTranslators } from '../../hooks/useTranslators/useTranslators';
 
 export const MappingEditor = ({
   history,

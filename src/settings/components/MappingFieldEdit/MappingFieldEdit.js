@@ -14,6 +14,7 @@ import { FieldTranslateDefault } from '../FieldTranslateDefault';
 import { MappingFieldCard } from '../MappingFieldCard';
 
 const MappingFieldEditComponent = ({
+  change,
   field = {},
   name,
   translatorOptions,
@@ -46,7 +47,9 @@ const MappingFieldEditComponent = ({
         <Col xs={6} md={3}>
           <FieldTranslator
             name={`${name}.dataSource.translation`}
+            change={change}
             dataOptions={translatorOptions}
+            mappingFieldName={name}
           />
         </Col>
 
@@ -61,8 +64,10 @@ const MappingFieldEditComponent = ({
 };
 
 MappingFieldEditComponent.propTypes = {
+  change: PropTypes.func.isRequired,
   field: PropTypes.object,
   name: PropTypes.string.isRequired,
+  translatorOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export const MappingFieldEdit = memo(MappingFieldEditComponent);
