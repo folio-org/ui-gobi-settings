@@ -17,12 +17,14 @@ import {
 import stripesForm from '@folio/stripes/final-form';
 import {
   handleKeyCommand,
+  useAccordionToggle,
   usePaneFocus,
 } from '@folio/stripes-acq-components';
 
 import { MappingFieldEdit } from '../../components';
 import {
   FORMATTED_ORDER_MAPPING_TYPES,
+  INITIAL_ORDER_MAPPING_ACCORDIONS,
   ORDER_MAPPING_ACCORDIONS_TITLES,
   ORDER_MAPPING_FIELDS_ACCORDIONS_MAP,
 } from '../../constants';
@@ -30,20 +32,22 @@ import { getTranslatorOptions } from '../utils';
 import { MappingFormFooter } from './MappingFormFooter';
 
 const MappingForm = ({
-  accordionStatus,
-  expandAll,
   form: { change },
   handleSubmit,
   onCancel,
   pristine,
   submitting,
-  toggleSection,
   translators,
   values,
 }) => {
   const intl = useIntl();
   const { name } = useParams();
   const { paneTitleRef } = usePaneFocus();
+  const [
+    expandAll,
+    stateSections,
+    toggleSection,
+  ] = useAccordionToggle(INITIAL_ORDER_MAPPING_ACCORDIONS);
 
   const translatorOptions = useMemo(() => getTranslatorOptions(intl, translators), [intl, translators]);
 
@@ -59,11 +63,11 @@ const MappingForm = ({
     },
     {
       name: 'expandAllSections',
-      handler: () => expandAll(mapValues(accordionStatus, () => true)),
+      handler: () => expandAll(mapValues(stateSections, () => true)),
     },
     {
       name: 'collapseAllSections',
-      handler: () => expandAll(mapValues(accordionStatus, () => false)),
+      handler: () => expandAll(mapValues(stateSections, () => false)),
     },
   ];
 
@@ -115,7 +119,7 @@ const MappingForm = ({
       scope={document.body}
     >
       <Pane
-        data-testid="gobi-config-file-edit-pane"
+        data-testid="gobi-mapping-edit-pane"
         id="pane-edit-gobi-mapping-configuration-file"
         defaultWidth="fill"
         dismissible
@@ -130,7 +134,7 @@ const MappingForm = ({
             <Row end="xs">
               <Col xs={12}>
                 <ExpandAllButton
-                  accordionStatus={accordionStatus}
+                  accordionStatus={stateSections}
                   onToggle={expandAll}
                 />
               </Col>
@@ -138,7 +142,7 @@ const MappingForm = ({
 
             <form>
               <AccordionSet
-                accordionStatus={accordionStatus}
+                accordionStatus={stateSections}
                 onToggle={toggleSection}
               >
                 {content}
@@ -153,14 +157,11 @@ const MappingForm = ({
 };
 
 MappingForm.propTypes = {
-  accordionStatus: PropTypes.object.isRequired,
-  expandAll: PropTypes.func.isRequired,
   form: PropTypes.object,
   handleSubmit: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
   pristine: PropTypes.bool,
   submitting: PropTypes.bool,
-  toggleSection: PropTypes.func.isRequired,
   translators: PropTypes.arrayOf(PropTypes.object).isRequired,
   values: PropTypes.object,
 };

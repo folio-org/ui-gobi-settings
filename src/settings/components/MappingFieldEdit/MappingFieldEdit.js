@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { memo } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import {
   Col,
@@ -33,7 +34,7 @@ const MappingFieldEditComponent = ({
 
         <Col xs={6} md={3}>
           <KeyValue
-            label="From field path"
+            label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath" />}
             value={field.dataSource?.from}
           />
         </Col>

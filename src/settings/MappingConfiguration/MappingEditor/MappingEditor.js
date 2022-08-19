@@ -46,11 +46,6 @@ export const MappingEditor = ({
   const {
     changeMappingConfig,
   } = useOrderMappingTypeMutation();
-  const [
-    expandAll,
-    stateSections,
-    toggleSection,
-  ] = useAccordionToggle(INITIAL_ORDER_MAPPING_ACCORDIONS);
 
   const contentLabel = intl.formatMessage({ id: 'ui-gobi-settings.mappingConfig' });
 
@@ -116,12 +111,9 @@ export const MappingEditor = ({
       isOpen
     >
       <MappingForm
-        accordionStatus={stateSections}
-        expandAll={expandAll}
         initialValues={initialValues}
         onCancel={onClose}
         onSubmit={onSubmit}
-        toggleSection={toggleSection}
         translators={translators}
       />
     </Layer>
