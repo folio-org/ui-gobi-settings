@@ -34,8 +34,8 @@
   "order.mappings.accordion.relatedAgreements": "Related agreements",
   "order.mappings.action.restoreDefaultConfig": "Restore default configuration",
   "order.mappings.field.dataSource.defaultValue": "Default value",
-  "order.mappings.field.dataSource.fromFieldName": "From field name",
-  "order.mappings.field.dataSource.fromFieldPath": "From field path",
+  "order.mappings.field.dataSource.fromFieldName": "From field",
+  "order.mappings.field.dataSource.fromFieldPath": "Path",
   "order.mappings.field.dataSource.translateDefault": "Translate default",
   "order.mappings.field.dataSource.translator": "Translation",
 
