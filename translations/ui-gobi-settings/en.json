@@ -32,7 +32,6 @@
   "order.mappings.accordion.polLocation": "Location",
   "order.mappings.accordion.polTags": "POL tags",
   "order.mappings.accordion.relatedAgreements": "Related agreements",
-  "order.mappings.action.restoreDefaultConfig": "Restore default configuration",
   "order.mappings.field.dataSource.defaultValue": "Default value",
   "order.mappings.field.dataSource.fromFieldName": "From field",
   "order.mappings.field.dataSource.fromFieldPath": "Path",
