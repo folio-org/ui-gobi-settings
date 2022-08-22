@@ -140,7 +140,7 @@ export const MappingView = ({
                 }}
               >
                 <Icon icon="trash">
-                  <FormattedMessage id="ui-gobi-settings.order.mappings.action.restoreDefaultConfig" />
+                  <FormattedMessage id="ui-gobi-settings.actions.restore.heading" />
                 </Icon>
               </Button>
             </IfPermission>
