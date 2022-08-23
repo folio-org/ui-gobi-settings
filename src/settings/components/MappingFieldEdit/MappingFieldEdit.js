@@ -51,9 +51,7 @@ const MappingFieldEditComponent = ({
         <Col xs={6} md={3}>
           <FieldTranslator
             name={`${name}.dataSource.translation`}
-            change={change}
             dataOptions={translatorOptions}
-            mappingFieldName={name}
           />
         </Col>
 
