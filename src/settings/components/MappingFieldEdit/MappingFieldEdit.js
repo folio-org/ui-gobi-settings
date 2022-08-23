@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 import { memo } from 'react';
-import { FormattedMessage } from 'react-intl';
 
 import {
   Col,
-  KeyValue,
   Row,
 } from '@folio/stripes/components';
 
 import { FieldDefaultValue } from '../FieldDefaultValue';
 import { FieldFromFieldName } from '../FieldFromFieldName';
+import { FieldFromPath } from '../FieldFromPath';
 import { FieldTranslator } from '../FieldTranslator';
 import { FieldTranslateDefault } from '../FieldTranslateDefault';
 import { MappingFieldCard } from '../MappingFieldCard';
@@ -17,6 +16,7 @@ import { MappingFieldCard } from '../MappingFieldCard';
 const MappingFieldEditComponent = ({
   change,
   field = {},
+  fieldNameOptions,
   name,
   translatorOptions,
 }) => {
@@ -29,13 +29,16 @@ const MappingFieldEditComponent = ({
         <Col xs={6} md={3}>
           <FieldFromFieldName
             name={`${name}.dataSource.dataSourceFieldName`}
+            change={change}
+            dataOptions={fieldNameOptions}
+            mappingFieldName={name}
           />
         </Col>
 
         <Col xs={6} md={3}>
-          <KeyValue
-            label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath" />}
-            value={field.dataSource?.from}
+          <FieldFromPath
+            mappingField={field}
+            name={`${name}.dataSource.from`}
           />
         </Col>
 
@@ -67,6 +70,7 @@ const MappingFieldEditComponent = ({
 MappingFieldEditComponent.propTypes = {
   change: PropTypes.func.isRequired,
   field: PropTypes.object,
+  fieldNameOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
   name: PropTypes.string.isRequired,
   translatorOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
