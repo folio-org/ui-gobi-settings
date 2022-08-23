@@ -1,11 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { Form } from 'react-final-form';
 
+import { getFieldNameOptions } from '../../MappingConfiguration/utils';
 import { MappingFieldEdit } from './MappingFieldEdit';
 
 const defaultProps = {
   change: jest.fn(),
   name: 'PREFIX',
+  fieldNameOptions: getFieldNameOptions(),
   translatorOptions: [
     { label: 'lookup 1', value: 'lookup1' },
     { label: 'lookup 2', value: 'lookup2' },
