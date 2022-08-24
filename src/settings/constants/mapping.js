@@ -104,3 +104,49 @@ export const FIELDS = {
   VOLUMES: 'VOLUMES',
   WORKFLOW_STATUS: 'WORKFLOW_STATUS',
 };
+
+export const CUSTOM_PATH = 'Custom Path';
+
+export const GOBI_FIELDS = {
+  baseAccount: 'Base Account',
+  subAccount: 'Sub Account',
+  title: 'Title',
+  productId: 'Product ID',
+  productQualifier: 'Product Qualifier',
+  publicationDate: 'Publication Date',
+  publisher: 'Publisher',
+  contributor: 'Contributor',
+  fundCode: 'Fund Code',
+  location: 'Location',
+  quantity: 'Quantity',
+  ypbOrderKey: 'YBP Order Key',
+  orderPlaced: 'Order Placed',
+  unitPrice: 'Unit Price',
+  currency: 'Currency',
+  localData1: 'Local Data 1',
+  localData2: 'Local Data 2',
+  localData3: 'Local Data 3',
+  localData4: 'Local Data 4',
+};
+
+export const GOBI_FIELDS_PATH_MAP = {
+  [GOBI_FIELDS.baseAccount]: '//BaseAccount',
+  [GOBI_FIELDS.subAccount]: '//SubAccount',
+  [GOBI_FIELDS.title]: '//datafield[@tag=\'245\']/*',
+  [GOBI_FIELDS.productId]: '//datafield[@tag=\'020\']/subfield[@code=\'a\']',
+  [GOBI_FIELDS.productQualifier]: '//datafield[@tag=\'020\']/subfield[@code=\'q\']',
+  [GOBI_FIELDS.publicationDate]: '//datafield[@tag=\'260\']/subfield[@code=\'c\']',
+  [GOBI_FIELDS.publisher]: '//datafield[@tag=\'260\']/subfield[@code=\'b\']',
+  [GOBI_FIELDS.contributor]: '//datafield[@tag=\'100\']/*',
+  [GOBI_FIELDS.fundCode]: '//fundcode',
+  [GOBI_FIELDS.location]: '//Location',
+  [GOBI_FIELDS.quantity]: '//Quantity',
+  [GOBI_FIELDS.ypbOrderKey]: '//YBPOrderKey',
+  [GOBI_FIELDS.orderPlaced]: '//OrderPlaced',
+  [GOBI_FIELDS.unitPrice]: '//ListPrice/Amount',
+  [GOBI_FIELDS.currency]: '//ListPrice/Currency',
+  [GOBI_FIELDS.localData1]: '//LocalData[Description=\'LocalData1\']/Value',
+  [GOBI_FIELDS.localData2]: '//LocalData[Description=\'LocalData2\']/Value',
+  [GOBI_FIELDS.localData3]: '//LocalData[Description=\'LocalData3\']/Value',
+  [GOBI_FIELDS.localData4]: '//LocalData[Description=\'LocalData4\']/Value',
+};

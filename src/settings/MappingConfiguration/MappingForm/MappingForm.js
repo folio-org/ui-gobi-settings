@@ -28,7 +28,10 @@ import {
   ORDER_MAPPING_ACCORDIONS_TITLES,
   ORDER_MAPPING_FIELDS_ACCORDIONS_MAP,
 } from '../../constants';
-import { getTranslatorOptions } from '../utils';
+import {
+  getFieldNameOptions,
+  getTranslatorOptions,
+} from '../utils';
 import { MappingFormFooter } from './MappingFormFooter';
 
 const MappingForm = ({
@@ -49,6 +52,7 @@ const MappingForm = ({
     toggleSection,
   ] = useAccordionToggle(INITIAL_ORDER_MAPPING_ACCORDIONS);
 
+  const fieldNameOptions = useMemo(() => getFieldNameOptions(), []);
   const translatorOptions = useMemo(() => getTranslatorOptions(intl, translators), [intl, translators]);
 
   const shortcuts = [
@@ -103,6 +107,7 @@ const MappingForm = ({
                 name={fieldName}
                 field={values[fieldName]}
                 change={change}
+                fieldNameOptions={fieldNameOptions}
                 translatorOptions={translatorOptions}
               />
             ))}
@@ -110,7 +115,12 @@ const MappingForm = ({
         </Row>
       </Accordion>
     ))
-  ), [change, translatorOptions, values]);
+  ), [
+    change,
+    fieldNameOptions,
+    translatorOptions,
+    values,
+  ]);
 
   return (
     <HasCommand
