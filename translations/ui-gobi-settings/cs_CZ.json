@@ -25,12 +25,11 @@
     "order.mappings.accordion.polLocation": "Umístění",
     "order.mappings.accordion.polTags": "Tagy POL",
     "order.mappings.accordion.relatedAgreements": "Související smlouvy",
-    "order.mappings.action.restoreDefaultConfig": "Obnovení výchozí konfigurace",
     "order.mappings.field.dataSource.defaultValue": "Výchozí hodnota",
     "order.mappings.field.dataSource.fromFieldName": "Z názvu pole",
-    "order.mappings.field.dataSource.fromFieldPath": "Z obsahu pole",
+    "order.mappings.field.dataSource.fromFieldPath": "Cesta",
     "order.mappings.field.dataSource.translateDefault": "Výchozí nastavení překladu",
-    "order.mappings.field.dataSource.translator": "Překladatel",
+    "order.mappings.field.dataSource.translator": "Překlad",
     "order.mappings.field.accessProvider": "Poskytovatel přístupu",
     "order.mappings.field.acquisitionMethod": "Akviziční metoda",
     "order.mappings.field.aggrementId": "ID smlouvy",
@@ -150,8 +149,8 @@
     "restore.success": "Byla obnovena výchozí konfigurace",
     "restore.error": "Výchozí konfigurace nebyla obnovena",
     "settings": "Nastavení integrace GOBI",
-    "mappingConfig.edit.paneTitle": "Edit {name}",
-    "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
-    "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
-    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account"
+    "mappingConfig.edit.paneTitle": "Upravit {name}",
+    "mappingConfig.update.success": "Mapování <b>{name}</b> byla úspěšně aktualizována",
+    "mappingConfig.update.error": "Nepodařilo se aktualizovat mapování <b>{name}</b>",
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Vyhledat UUID jednotek akvizice přidružené k tomuto účtu organizace"
 }
