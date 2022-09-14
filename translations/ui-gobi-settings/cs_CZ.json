@@ -6,7 +6,7 @@
     "permission.settings": "Integrace GOBI: zobrazení a úprava nastavení",
     "actions.restore.confirm": "Potvrdit",
     "actions.restore.heading": "Obnovit výchozí konfiguraci",
-    "actions.restore.message": "Obnovením této konfigurace se odstraní všechna přizpůsobení a obnoví se výchozí mapování konfiguračních souborů.",
+    "actions.restore.message": "Obnovením této konfigurace se smažou všechna přizpůsobení a obnoví se výchozí mapování konfiguračních souborů.",
     "button.edit": "Upravit",
     "order.mappings.accordion.poInfo": "PO informace",
     "order.mappings.accordion.poOngoing": "Průběžné informace o PO",
@@ -33,7 +33,6 @@
     "order.mappings.field.accessProvider": "Poskytovatel přístupu",
     "order.mappings.field.acquisitionMethod": "Akviziční metoda",
     "order.mappings.field.aggrementId": "ID smlouvy",
-    "order.mappings.field.acquisitionUnits": "Akviziční jednotky",
     "order.mappings.field.activated": "Stav aktivace",
     "order.mappings.field.activationDue": "Aktivace v důsledku",
     "order.mappings.field.additionalCost": "Dodatečné náklady",
@@ -152,5 +151,8 @@
     "mappingConfig.edit.paneTitle": "Upravit {name}",
     "mappingConfig.update.success": "Mapování <b>{name}</b> byla úspěšně aktualizována",
     "mappingConfig.update.error": "Nepodařilo se aktualizovat mapování <b>{name}</b>",
-    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Vyhledat UUID jednotek akvizice přidružené k tomuto účtu organizace"
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Vyhledat UUID jednotek akvizice přidružené k tomuto účtu organizace",
+    "order.mappings.field.acquisitionUnit": "Akviziční jednotky",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Vyhledat UUID akvizičních jednotek spojené s názvem",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Vyhledat UUID akvizičních jednotek přidružených k účtu"
 }

@@ -33,7 +33,6 @@
     "order.mappings.field.accessProvider": "访问提供者",
     "order.mappings.field.acquisitionMethod": "采购方式",
     "order.mappings.field.aggrementId": "协议ID",
-    "order.mappings.field.acquisitionUnits": "采购单位",
     "order.mappings.field.activated": "激活状态",
     "order.mappings.field.activationDue": "激活到期",
     "order.mappings.field.additionalCost": "附加费用",
@@ -152,5 +151,8 @@
     "mappingConfig.edit.paneTitle": "编辑 {name}",
     "mappingConfig.update.success": "<b> {name} </b>映射已成功更新",
     "mappingConfig.update.error": "未能更新<b> {name} </b>映射",
-    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "查找与此组织帐户关联的采购单位 UUID"
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "查找与此组织帐户关联的采购单位 UUID",
+    "order.mappings.field.acquisitionUnit": "Acquisition units",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account"
 }
