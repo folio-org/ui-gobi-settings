@@ -33,7 +33,6 @@
     "order.mappings.field.accessProvider": "مقدم خدمة الوصول",
     "order.mappings.field.acquisitionMethod": "طريقة التزويد",
     "order.mappings.field.aggrementId": "معرف الاتفاقية",
-    "order.mappings.field.acquisitionUnits": "وحدات التزويد",
     "order.mappings.field.activated": "حالة التفعيل",
     "order.mappings.field.activationDue": "التفعيل مستحق",
     "order.mappings.field.additionalCost": "التكلفة الإضافية",
@@ -152,5 +151,8 @@
     "mappingConfig.edit.paneTitle": "تحرير {name}",
     "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
     "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
-    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account"
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
+    "order.mappings.field.acquisitionUnit": "وحدات التزويد",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account"
 }

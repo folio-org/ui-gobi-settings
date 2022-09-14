@@ -33,7 +33,6 @@
     "order.mappings.field.accessProvider": "Access provider",
     "order.mappings.field.acquisitionMethod": "Acquisition method",
     "order.mappings.field.aggrementId": "Agreement ID",
-    "order.mappings.field.acquisitionUnits": "Acquisition units",
     "order.mappings.field.activated": "Activation status",
     "order.mappings.field.activationDue": "Activation due",
     "order.mappings.field.additionalCost": "Additional cost",
@@ -152,5 +151,8 @@
     "mappingConfig.edit.paneTitle": "Modifier {name}",
     "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
     "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
-    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account"
+    "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
+    "order.mappings.field.acquisitionUnit": "Acquisition units",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account"
 }
