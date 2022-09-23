@@ -2,6 +2,7 @@
 
 ## (IN PROGRESS)
 
+* Support `users` interface version `16.0`. Refs UIGS-7.
 * Module setup. Refs UIGS-1.
 * Add GOBI integration area to FOLIO settings. Refs UIGS-2.
 * Display GOBI integration Configuration files and mappings. Refs UIGS-4.
