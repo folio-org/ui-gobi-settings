@@ -78,7 +78,7 @@
     ],
     "okapiInterfaces": {
       "custom-mapping": "1.0",
-      "users": "15.1"
+      "users": "15.1 16.0"
     },
     "stripesDeps": [
       "@folio/stripes-acq-components"

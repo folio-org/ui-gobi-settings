@@ -8,3 +8,4 @@
 * Allow user to edit mappings. Refs UIGS-5.
 * Allow user to reset to default configuration. Refs UIGS-6.
 * Define From field name and Path and allow Custom path option. Refs UIGS-8.
+* Upgrade `users` interface to `16.0`. Refs UIGS-7.
