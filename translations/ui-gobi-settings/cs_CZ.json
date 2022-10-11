@@ -91,7 +91,7 @@
     "order.mappings.field.quantityElectronic": "Množství elektronické",
     "order.mappings.field.quantityPhysical": "Fyzické množství",
     "order.mappings.field.receiptDate": "Datum přijetí",
-    "order.mappings.field.receiptDue": "Splatnost účtenky",
+    "order.mappings.field.receiptDue": "Splatnost příjmu",
     "order.mappings.field.receivingNote": "Poznámka příjmu",
     "order.mappings.field.receivingWorkflow": "Příjem pracovního postupu",
     "order.mappings.field.requester": "Žadatel",
