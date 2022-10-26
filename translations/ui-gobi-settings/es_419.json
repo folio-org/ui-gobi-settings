@@ -7,7 +7,7 @@
     "actions.restore.confirm": "Confirm",
     "actions.restore.heading": "Reset default configuration",
     "actions.restore.message": "Resetting this configuration will delete all customizations and restore the default configuration file mappings",
-    "button.edit": "Edit",
+    "button.edit": "Editar",
     "order.mappings.accordion.poInfo": "PO information",
     "order.mappings.accordion.poOngoing": "Ongoing PO information",
     "order.mappings.accordion.poNotes": "Notes",
