@@ -12,21 +12,19 @@ export const FieldFromPath = ({
 }) => {
   const isCustomPath = mappingField.dataSource?.dataSourceFieldName === CUSTOM_PATH;
 
-  return isCustomPath
-    ? (
-      <Field
-        name={name}
-        component={TextField}
-        id={`from-field-path-${name}`}
-        label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath" />}
-      />
-    )
-    : (
-      <KeyValue
-        label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath" />}
-        value={mappingField.dataSource?.from}
-      />
-    );
+  return (
+    <Field
+      id={`from-field-path-${name}`}
+      name={name}
+      label={<FormattedMessage id="ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath" />}
+      render={(props) => (
+        isCustomPath
+          ? <TextField {...props} />
+          // eslint-disable-next-line react/prop-types
+          : <KeyValue value={props.input.value} {...props} />
+      )}
+    />
+  );
 };
 
 FieldFromPath.propTypes = {

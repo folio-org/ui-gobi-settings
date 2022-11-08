@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import { mapValues } from 'lodash';
@@ -35,7 +35,7 @@ import {
 import { MappingFormFooter } from './MappingFormFooter';
 
 const MappingForm = ({
-  form: { change },
+  form: { change, reset },
   handleSubmit,
   onCancel,
   pristine,
@@ -75,6 +75,8 @@ const MappingForm = ({
     },
   ];
 
+  const isClearAllDisabled = !Object.keys(values).length;
+
   const paneTitle = (
     <FormattedMessage
       id="ui-gobi-settings.mappingConfig.edit.paneTitle"
@@ -84,13 +86,26 @@ const MappingForm = ({
     />
   );
 
+  const onClearMappings = useCallback(() => {
+    reset({});
+  }, [reset]);
+
   const formFooter = useMemo(() => (
     <MappingFormFooter
       disabled={pristine || submitting}
+      clearAllDisabled={isClearAllDisabled}
       onCancel={onCancel}
+      onClearMappings={onClearMappings}
       onSubmit={handleSubmit}
     />
-  ), [handleSubmit, onCancel, pristine, submitting]);
+  ), [
+    handleSubmit,
+    isClearAllDisabled,
+    onCancel,
+    onClearMappings,
+    pristine,
+    submitting,
+  ]);
 
   const content = useMemo(() => (
     Object.entries(ORDER_MAPPING_FIELDS_ACCORDIONS_MAP).map(([accordionId, fields]) => (

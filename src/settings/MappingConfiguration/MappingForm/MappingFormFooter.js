@@ -3,9 +3,13 @@ import { FormattedMessage } from 'react-intl';
 
 import { Button, PaneFooter } from '@folio/stripes/components';
 
+import css from './MappingFormFooter.css';
+
 export const MappingFormFooter = ({
+  clearAllDisabled,
   disabled,
   onCancel,
+  onClearMappings,
   onSubmit,
 }) => {
   const start = (
@@ -19,16 +23,28 @@ export const MappingFormFooter = ({
   );
 
   const end = (
-    <Button
-      data-test-button-save
-      id="clickable-updatePoLine"
-      buttonStyle="primary mega"
-      type="submit"
-      disabled={disabled}
-      onClick={onSubmit}
-    >
-      <FormattedMessage id="stripes-acq-components.FormFooter.save" />
-    </Button>
+    <div className={css.paneFooterEnd}>
+      <Button
+        id="clear-mapping"
+        buttonStyle="default mega"
+        disabled={clearAllDisabled}
+        type="reset"
+        onClick={onClearMappings}
+      >
+        <FormattedMessage id="ui-gobi-settings.mappingConfig.edit.footer.clearAll" />
+      </Button>
+
+      <Button
+        data-test-button-save
+        id="save-mapping"
+        buttonStyle="primary mega"
+        type="submit"
+        disabled={disabled}
+        onClick={onSubmit}
+      >
+        <FormattedMessage id="stripes-acq-components.FormFooter.save" />
+      </Button>
+    </div>
   );
 
   return (
@@ -40,7 +56,9 @@ export const MappingFormFooter = ({
 };
 
 MappingFormFooter.propTypes = {
+  clearAllDisabled: PropTypes.bool,
   disabled: PropTypes.bool,
   onCancel: PropTypes.func.isRequired,
+  onClearMappings: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
 };

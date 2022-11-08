@@ -6,6 +6,7 @@ import { Card } from '@folio/stripes/components';
 
 export const MappingFieldCard = ({
   children,
+  headerEnd,
   id,
   name,
 }) => {
@@ -22,6 +23,7 @@ export const MappingFieldCard = ({
     <Card
       id={id}
       headerStart={legend}
+      headerEnd={headerEnd}
       roundedBorder
     >
       {children}
@@ -33,4 +35,5 @@ MappingFieldCard.propTypes = {
   children: PropTypes.node,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  headerEnd: PropTypes.node,
 };
