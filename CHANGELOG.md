@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* User is unable to clear existing mapping. Refs UIGS-11.
+
 ## [1.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v1.0.0) (2022-10-25)
 
 * Module setup. Refs UIGS-1.

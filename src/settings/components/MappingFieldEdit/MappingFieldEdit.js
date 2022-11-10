@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import { memo } from 'react';
+import { memo, useCallback, useMemo } from 'react';
 
 import {
   Col,
+  IconButton,
   Row,
 } from '@folio/stripes/components';
 
@@ -20,10 +21,22 @@ const MappingFieldEditComponent = ({
   name,
   translatorOptions,
 }) => {
+  const onClear = useCallback(() => {
+    change(name, undefined);
+  }, [change, name]);
+
+  const headerEnd = useMemo(() => !!Object.values(field.dataSource || {}).length && (
+    <IconButton
+      icon="times-circle-solid"
+      onClick={onClear}
+    />
+  ), [field, onClear]);
+
   return (
     <MappingFieldCard
       id={`field-${name}`}
       name={name}
+      headerEnd={headerEnd}
     >
       <Row>
         <Col xs={6} md={3}>
