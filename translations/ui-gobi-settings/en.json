@@ -12,6 +12,7 @@
 
   "mappingConfig": "Mapping Configuration",
   "mappingConfig.edit.paneTitle": "Edit {name}",
+  "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
   "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
   "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
 
