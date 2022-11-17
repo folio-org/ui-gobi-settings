@@ -44,7 +44,7 @@
     "order.mappings.field.collection": "Coleção",
     "order.mappings.field.contributor": "Contribuidor",
     "order.mappings.field.contributorNameType": "Tipo de contribuidor",
-    "order.mappings.field.createInventory": "Criar inventário",
+    "order.mappings.field.createInventory": "Criar registro",
     "order.mappings.field.currency": "Moeda",
     "order.mappings.field.dateOrdered": "Data da compra",
     "order.mappings.field.description": "Nota interna",
@@ -154,5 +154,6 @@
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Consultar UUIDs da unidade de aquisição associados à conta desta organização",
     "order.mappings.field.acquisitionUnit": "Unidades de aquisição",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Consultar UUIDs da unidade de aquisição associados ao nome",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Consultar UUIDs da unidade de aquisição associados à conta"
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Consultar UUIDs da unidade de aquisição associados à conta",
+    "mappingConfig.edit.footer.clearAll": "Limpar todos os mapeamentos de campo"
 }

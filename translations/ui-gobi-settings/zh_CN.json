@@ -154,5 +154,6 @@
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "查找与此组织帐户关联的采购单位 UUID",
     "order.mappings.field.acquisitionUnit": "采购单位",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "查找与名称关联的采购单位UUID",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找与帐户关联的采购单位 UUID"
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找与帐户关联的采购单位 UUID",
+    "mappingConfig.edit.footer.clearAll": "Clear all field mappings"
 }

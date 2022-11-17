@@ -17,7 +17,7 @@
     "order.mappings.accordion.polDetails": "PO line details",
     "order.mappings.accordion.polOngoingOrder": "POL Ongoing order information",
     "order.mappings.accordion.polCostDetails": "Cost details",
-    "order.mappings.accordion.polVendor": "Vendor",
+    "order.mappings.accordion.polVendor": "ベンダー",
     "order.mappings.accordion.polFundDistribution": "Fund distribution",
     "order.mappings.accordion.polEResources": "E-resources details",
     "order.mappings.accordion.polFResources": "Physical resource details",
@@ -111,7 +111,7 @@
     "order.mappings.field.trial": "Trial",
     "order.mappings.field.userLimit": "User limit",
     "order.mappings.field.url": "URL",
-    "order.mappings.field.vendor": "Vendor",
+    "order.mappings.field.vendor": "ベンダー",
     "order.mappings.field.vendorAccount": "Account number",
     "order.mappings.field.vendorInstructions": "Instructions to vendor",
     "order.mappings.field.vendorRefNo": "Vendor reference number",
@@ -154,5 +154,6 @@
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
     "order.mappings.field.acquisitionUnit": "Acquisition units",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account"
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
+    "mappingConfig.edit.footer.clearAll": "Clear all field mappings"
 }
