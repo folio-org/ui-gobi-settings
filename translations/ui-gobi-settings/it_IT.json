@@ -154,5 +154,6 @@
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
     "order.mappings.field.acquisitionUnit": "Unità di acquisizione",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account"
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
+    "mappingConfig.edit.footer.clearAll": "Clear all field mappings"
 }
