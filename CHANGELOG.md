@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+## [1.0.1](https://github.com/folio-org/ui-gobi-settings/tree/v1.0.1) (2022-11-25)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v1.0.0...v1.0.1)
+
 * User is unable to clear existing mapping. Refs UIGS-11.
 
 ## [1.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v1.0.0) (2022-10-25)
