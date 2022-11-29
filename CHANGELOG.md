@@ -2,6 +2,8 @@
 
 ## (IN PROGRESS)
 
+* UX: Sentence case on GOBI integration. Refs UIGS-14.
+
 ## [1.0.1](https://github.com/folio-org/ui-gobi-settings/tree/v1.0.1) (2022-11-25)
 [Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v1.0.0...v1.0.1)
 
