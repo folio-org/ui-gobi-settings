@@ -60,7 +60,7 @@
     "order.mappings.field.fundId": "经费ID",
     "order.mappings.field.fundPercentage": "类型",
     "order.mappings.field.linkedPackage": "链接资源包",
-    "order.mappings.field.listUnitPrice": "实物单价",
+    "order.mappings.field.listUnitPrice": "实体单价",
     "order.mappings.field.listUnitPriceElectronic": "电子单价",
     "order.mappings.field.location": "位置",
     "order.mappings.field.manualPo": "人工",
@@ -89,7 +89,7 @@
     "order.mappings.field.publisher": "出版者",
     "order.mappings.field.purchaseOrderId": "采购订单ID",
     "order.mappings.field.quantityElectronic": "电子数量",
-    "order.mappings.field.quantityPhysical": "实物数量",
+    "order.mappings.field.quantityPhysical": "实体数量",
     "order.mappings.field.receiptDate": "接收日期",
     "order.mappings.field.receiptDue": "接收到期",
     "order.mappings.field.receivingNote": "接收附注",
@@ -155,5 +155,5 @@
     "order.mappings.field.acquisitionUnit": "采购单位",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "查找与名称关联的采购单位UUID",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找与帐户关联的采购单位 UUID",
-    "mappingConfig.edit.footer.clearAll": "Clear all field mappings"
+    "mappingConfig.edit.footer.clearAll": "清除所有字段映射"
 }
