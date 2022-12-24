@@ -1,7 +1,7 @@
 {
     "meta.title": "GOBI integration",
     "configFiles": "Konfigurationsdateien",
-    "integrationDetails": "Integration details",
+    "integrationDetails": "EDI-Anbindungen",
     "mappingConfig": "Mapping configuration",
     "permission.settings": "GOBI Integration: view and edit settings",
     "actions.restore.confirm": "Confirm",
@@ -18,7 +18,7 @@
     "order.mappings.accordion.polOngoingOrder": "POL Ongoing order information",
     "order.mappings.accordion.polCostDetails": "Cost details",
     "order.mappings.accordion.polVendor": "Vendor",
-    "order.mappings.accordion.polFundDistribution": "Fund distribution",
+    "order.mappings.accordion.polFundDistribution": "Fondsverteilung",
     "order.mappings.accordion.polEResources": "E-resources details",
     "order.mappings.accordion.polFResources": "Physical resource details",
     "order.mappings.accordion.polOtherResources": "Other resource details",
