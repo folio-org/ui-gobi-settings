@@ -2,6 +2,9 @@
 
 ## (IN PROGRESS)
 
+## [2.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v2.0.0) (2023-02-22)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v1.0.1...v2.0.0)
+
 * UX: Sentence case on GOBI integration. Refs UIGS-14.
 * *BREAKING*: Update `@folio/stripes` to `8.0.0`. Refs UIGS-16.
 
