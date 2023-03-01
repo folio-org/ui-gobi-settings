@@ -1,7 +1,7 @@
 {
-    "meta.title": "GOBI-Anbindung",
+    "meta.title": "GOBI-Integration",
     "configFiles": "Konfigurationsdateien",
-    "integrationDetails": "Anbindungsdetails",
+    "integrationDetails": "Integrationsdetails",
     "mappingConfig": "Mapping configuration",
     "permission.settings": "GOBI Integration: view and edit settings",
     "actions.restore.confirm": "Confirm",
