@@ -152,8 +152,8 @@
     "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
     "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
-    "order.mappings.field.acquisitionUnit": "Acquisition units",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
-    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
+    "order.mappings.field.acquisitionUnit": "Unidades de adquisición",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Búsqueda de UUID de unidades de adquisición asociados al nombre",
+    "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Búsqueda de UUID de unidad de adquisición asociados a la cuenta",
     "mappingConfig.edit.footer.clearAll": "Borrar todos los mapeos de campo"
 }
