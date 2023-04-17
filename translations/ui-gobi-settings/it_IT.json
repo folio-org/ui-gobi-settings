@@ -95,7 +95,7 @@
     "order.mappings.field.receivingNote": "Receiving note",
     "order.mappings.field.receivingWorkflow": "Receiving workflow",
     "order.mappings.field.requester": "Requester",
-    "order.mappings.field.reEncumber": "Ri-impegna",
+    "order.mappings.field.reEncumber": "Riporta",
     "order.mappings.field.rush": "Urgente",
     "order.mappings.field.selector": "Selector",
     "order.mappings.field.shipTo": "Ship to",
