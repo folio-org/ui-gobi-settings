@@ -37,7 +37,7 @@
     "order.mappings.field.activationDue": "Aktivace v důsledku",
     "order.mappings.field.additionalCost": "Dodatečné náklady",
     "order.mappings.field.approved": "Schváleno",
-    "order.mappings.field.assignedTo": "Přiděleno",
+    "order.mappings.field.assignedTo": "Přiřazeno",
     "order.mappings.field.billTo": "Naúčtovat na",
     "order.mappings.field.cancellationRestriction": "Zrušení omezení",
     "order.mappings.field.cancellationRestrictionNote": "Popis zrušení",
