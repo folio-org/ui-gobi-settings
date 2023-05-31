@@ -95,7 +95,7 @@
     "order.mappings.field.receivingNote": "Nota de recepción",
     "order.mappings.field.receivingWorkflow": "Flujo de trabajo de recepción",
     "order.mappings.field.requester": "Solicitante",
-    "order.mappings.field.reEncumber": "Reenumerar",
+    "order.mappings.field.reEncumber": "Comprometer próximo presupuesto",
     "order.mappings.field.rush": "Correr",
     "order.mappings.field.selector": "Selector",
     "order.mappings.field.shipTo": "Enviar a",
