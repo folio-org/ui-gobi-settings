@@ -3,7 +3,8 @@
 ## (3.0.0 IN PROGRESS)
 * *BREAKING* Update `react` to `v18`. Refs UIAC-69.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs UIGS-20.
- 
+* Upgrade `Node` to `18` version. Refs UIGS-19.
+
 ## [2.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v2.0.0) (2023-02-22)
 [Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v1.0.1...v2.0.0)
 
