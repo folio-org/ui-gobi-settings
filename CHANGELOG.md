@@ -1,7 +1,7 @@
 # Change history for ui-gobi-settings
 
 ## (3.0.0 IN PROGRESS)
-* *BREAKING* Update `react` to `v18`. Refs UIAC-69.
+* *BREAKING* Update `react` to `v18`. Refs UIGS-18.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs UIGS-20.
 * Upgrade `Node` to `18` version. Refs UIGS-19.
 
