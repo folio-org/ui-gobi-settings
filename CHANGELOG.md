@@ -1,6 +1,9 @@
 # Change history for ui-gobi-settings
 
-## (3.0.0 IN PROGRESS)
+## (3.1.0 IN PROGRESS)
+
+## [3.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v3.0.0) (2023-10-12)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v2.0.0...v3.0.0)
 * *BREAKING* Update `react` to `v18`. Refs UIGS-18.
 * *BREAKING* bump `react-intl` to `v6.4.4`. Refs UIGS-20.
 * Upgrade `Node` to `18` version. Refs UIGS-19.
