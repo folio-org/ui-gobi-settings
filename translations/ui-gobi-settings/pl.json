@@ -25,7 +25,7 @@
     "order.mappings.accordion.polLocation": "Lokalizacja",
     "order.mappings.accordion.polTags": "POL tags",
     "order.mappings.accordion.relatedAgreements": "Related agreements",
-    "order.mappings.field.dataSource.defaultValue": "Domyślna wartość",
+    "order.mappings.field.dataSource.defaultValue": "Wartość domyślna",
     "order.mappings.field.dataSource.fromFieldName": "Z pola",
     "order.mappings.field.dataSource.fromFieldPath": "Ścieżka",
     "order.mappings.field.dataSource.translateDefault": "Przetłumacz domyslnie",
