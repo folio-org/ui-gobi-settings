@@ -51,6 +51,8 @@
   "order.mappings.field.billTo": "Bill to",
   "order.mappings.field.cancellationRestriction": "Cancellation restriction",
   "order.mappings.field.cancellationRestrictionNote": "Cancellation description",
+  "order.mappings.field.claimActive": "Claiming active",
+  "order.mappings.field.claimInterval": "Claiming interval",
   "order.mappings.field.collection": "Collection",
   "order.mappings.field.contributor": "Contributor",
   "order.mappings.field.contributorNameType": "Contributor type",
