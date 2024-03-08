@@ -155,5 +155,7 @@
     "order.mappings.field.acquisitionUnit": "Jednostki gromadzenia",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
-    "mappingConfig.edit.footer.clearAll": "Clear all field mappings"
+    "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
+    "order.mappings.field.claimActive": "Claiming active",
+    "order.mappings.field.claimInterval": "Claiming interval"
 }
