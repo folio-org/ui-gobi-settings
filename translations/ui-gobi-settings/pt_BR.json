@@ -155,5 +155,7 @@
     "order.mappings.field.acquisitionUnit": "Unidades de aquisição",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Consultar UUIDs da unidade de aquisição associados ao nome",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Consultar UUIDs da unidade de aquisição associados à conta",
-    "mappingConfig.edit.footer.clearAll": "Limpar todos os mapeamentos de campo"
+    "mappingConfig.edit.footer.clearAll": "Limpar todos os mapeamentos de campo",
+    "order.mappings.field.claimActive": "Reclamação ativa",
+    "order.mappings.field.claimInterval": "Intervalo de reclamação"
 }

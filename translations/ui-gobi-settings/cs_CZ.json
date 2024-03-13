@@ -155,5 +155,7 @@
     "order.mappings.field.acquisitionUnit": "Akviziční jednotky",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Vyhledat UUID akvizičních jednotek spojené s názvem",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Vyhledat UUID akvizičních jednotek přidružených k účtu",
-    "mappingConfig.edit.footer.clearAll": "Vymazat všechna mapování polí"
+    "mappingConfig.edit.footer.clearAll": "Vymazat všechna mapování polí",
+    "order.mappings.field.claimActive": "Nárokování je aktivní",
+    "order.mappings.field.claimInterval": "Interval nárokování"
 }
