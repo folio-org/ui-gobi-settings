@@ -1,6 +1,9 @@
 # Change history for ui-gobi-settings
 
-## (3.1.0 IN PROGRESS)
+## (3.2.0 IN PROGRESS)
+
+## [3.1.0](https://github.com/folio-org/ui-gobi-settings/tree/v3.1.0) (2024-03-19)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v3.0.0...v3.1.0)
 
 * Update GOBI settings to include "Claiming active" and "Claiming interval" fields. Refs UIGS-22.
 
