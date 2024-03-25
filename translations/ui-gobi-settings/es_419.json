@@ -107,7 +107,7 @@
     "order.mappings.field.tags": "Etiquetas",
     "order.mappings.field.title": "Título",
     "order.mappings.field.totalEstimatedPrice": "Precio total estimado",
-    "order.mappings.field.totalItems": "Total de artículos",
+    "order.mappings.field.totalItems": "Total de ítems",
     "order.mappings.field.trial": "Ensayo",
     "order.mappings.field.userLimit": "Límite de usuarios",
     "order.mappings.field.url": "URL",
