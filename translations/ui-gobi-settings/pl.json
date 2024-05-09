@@ -43,7 +43,7 @@
     "order.mappings.field.cancellationRestrictionNote": "Opis anulowania",
     "order.mappings.field.collection": "Collection",
     "order.mappings.field.contributor": "Współtwórca",
-    "order.mappings.field.contributorNameType": "Contributor type",
+    "order.mappings.field.contributorNameType": "Rodzaj współtwórcy",
     "order.mappings.field.createInventory": "Create inventory",
     "order.mappings.field.currency": "Waluta",
     "order.mappings.field.dateOrdered": "Date ordered",
