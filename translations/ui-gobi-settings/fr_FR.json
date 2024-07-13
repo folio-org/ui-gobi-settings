@@ -94,7 +94,7 @@
     "order.mappings.field.receiptDue": "Receipt due",
     "order.mappings.field.receivingNote": "Receiving note",
     "order.mappings.field.receivingWorkflow": "Receiving workflow",
-    "order.mappings.field.requester": "Requester",
+    "order.mappings.field.requester": "Réservataire",
     "order.mappings.field.reEncumber": "Re-encumber",
     "order.mappings.field.rush": "Rush",
     "order.mappings.field.selector": "Selector",
