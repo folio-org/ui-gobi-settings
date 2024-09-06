@@ -92,7 +92,7 @@
     "order.mappings.field.quantityPhysical": "物理数量",
     "order.mappings.field.receiptDate": "Receipt date",
     "order.mappings.field.receiptDue": "Receipt due",
-    "order.mappings.field.receivingNote": "Receiving note",
+    "order.mappings.field.receivingNote": "受入ノート",
     "order.mappings.field.receivingWorkflow": "受入ワークフロー",
     "order.mappings.field.requester": "リクエスト者",
     "order.mappings.field.reEncumber": "Re-encumber",
