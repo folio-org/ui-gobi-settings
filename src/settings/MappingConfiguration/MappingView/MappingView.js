@@ -97,7 +97,7 @@ export const MappingView = ({
   const shortcuts = [
     {
       name: 'edit',
-      handler: handleKeyCommand(() => stripes.hasPerm('ui-gobi-settings.permission.settings') && onEdit()),
+      handler: handleKeyCommand(() => stripes.hasPerm('ui-gobi-settings.permission.settings.edit') && onEdit()),
     },
     {
       name: 'cancel',
@@ -117,7 +117,7 @@ export const MappingView = ({
   const getActionMenu = useCallback(({ onToggle }) => {
     return (
       <>
-        <IfPermission perm="ui-gobi-settings.permission.settings">
+        <IfPermission perm="ui-gobi-settings.permission.settings.edit">
           <Button
             data-testid="action-edit-mapping"
             buttonStyle="dropdownItem"
@@ -130,7 +130,7 @@ export const MappingView = ({
         </IfPermission>
         {
           mappingType === GOBI_MAPPING_TYPES.custom && (
-            <IfPermission perm="ui-gobi-settings.permission.settings">
+            <IfPermission perm="ui-gobi-settings.permission.settings.edit">
               <Button
                 data-testid="action-restore-default-mapping"
                 buttonStyle="dropdownItem"

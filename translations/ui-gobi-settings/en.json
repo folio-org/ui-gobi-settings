@@ -168,5 +168,6 @@
 
   "settings": "GOBI Integration settings",
 
-  "permission.settings": "GOBI Integration: view and edit settings"
+  "permission.settings.view": "Settings (GOBI Integration): Can view only",
+  "permission.settings.edit": "Settings (GOBI Integration): Can view and edit"
 }
