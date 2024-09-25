@@ -115,6 +115,8 @@ export const MappingView = ({
   ];
 
   const getActionMenu = useCallback(({ onToggle }) => {
+    if (!stripes.hasPerm('ui-gobi-settings.permission.settings.edit')) return null;
+
     return (
       <IfPermission perm="ui-gobi-settings.permission.settings.edit">
         <Button
@@ -144,7 +146,7 @@ export const MappingView = ({
         }
       </IfPermission>
     );
-  }, [mappingType, onEdit, toggleRestoreConfirmation]);
+  }, [mappingType, onEdit, stripes, toggleRestoreConfirmation]);
 
   if (isLoading) {
     return (
