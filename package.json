@@ -103,7 +103,7 @@
       },
       {
         "permissionName": "ui-gobi-settings.permission.settings.edit",
-        "displayName": "Settings (GOBI Integration): Can view and edit",
+        "displayName": "Settings (GOBI Integration): Can view and edit settings",
         "subPermissions": [
           "ui-gobi-settings.permission.settings.view",
           "gobi.custom-mappings.item.post",
