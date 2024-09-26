@@ -97,7 +97,7 @@ export const MappingView = ({
   const shortcuts = [
     {
       name: 'edit',
-      handler: handleKeyCommand(() => stripes.hasPerm('ui-gobi-settings.permission.settings') && onEdit()),
+      handler: handleKeyCommand(() => stripes.hasPerm('ui-gobi-settings.permission.settings.edit') && onEdit()),
     },
     {
       name: 'cancel',
@@ -115,40 +115,38 @@ export const MappingView = ({
   ];
 
   const getActionMenu = useCallback(({ onToggle }) => {
+    if (!stripes.hasPerm('ui-gobi-settings.permission.settings.edit')) return null;
+
     return (
-      <>
-        <IfPermission perm="ui-gobi-settings.permission.settings">
-          <Button
-            data-testid="action-edit-mapping"
-            buttonStyle="dropdownItem"
-            onClick={onEdit}
-          >
-            <Icon icon="edit">
-              <FormattedMessage id="ui-gobi-settings.button.edit" />
-            </Icon>
-          </Button>
-        </IfPermission>
+      <IfPermission perm="ui-gobi-settings.permission.settings.edit">
+        <Button
+          data-testid="action-edit-mapping"
+          buttonStyle="dropdownItem"
+          onClick={onEdit}
+        >
+          <Icon icon="edit">
+            <FormattedMessage id="ui-gobi-settings.button.edit" />
+          </Icon>
+        </Button>
         {
           mappingType === GOBI_MAPPING_TYPES.custom && (
-            <IfPermission perm="ui-gobi-settings.permission.settings">
-              <Button
-                data-testid="action-restore-default-mapping"
-                buttonStyle="dropdownItem"
-                onClick={() => {
-                  onToggle();
-                  toggleRestoreConfirmation();
-                }}
-              >
-                <Icon icon="trash">
-                  <FormattedMessage id="ui-gobi-settings.actions.restore.heading" />
-                </Icon>
-              </Button>
-            </IfPermission>
+            <Button
+              data-testid="action-restore-default-mapping"
+              buttonStyle="dropdownItem"
+              onClick={() => {
+                onToggle();
+                toggleRestoreConfirmation();
+              }}
+            >
+              <Icon icon="trash">
+                <FormattedMessage id="ui-gobi-settings.actions.restore.heading" />
+              </Icon>
+            </Button>
           )
         }
-      </>
+      </IfPermission>
     );
-  }, [mappingType, onEdit, toggleRestoreConfirmation]);
+  }, [mappingType, onEdit, stripes, toggleRestoreConfirmation]);
 
   if (isLoading) {
     return (

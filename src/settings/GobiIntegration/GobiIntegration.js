@@ -18,7 +18,7 @@ const sections = [
         component: MappingConfiguration,
         label: <FormattedMessage id="ui-gobi-settings.mappingConfig" />,
         route: 'mapping-configuration',
-        perm: 'ui-gobi-settings.permission.settings',
+        perm: 'ui-gobi-settings.permission.settings.view',
       },
     ],
   },

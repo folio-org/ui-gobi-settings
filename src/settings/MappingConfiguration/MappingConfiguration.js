@@ -20,7 +20,7 @@ export const MappingConfiguration = ({ history, match }) => {
       <PermissionedRoute
         exact
         path={path}
-        perm="ui-gobi-settings.permission.settings"
+        perm="ui-gobi-settings.permission.settings.view"
         returnLink={SETTINGS_RETURN_LINK}
         returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
       >
@@ -33,7 +33,7 @@ export const MappingConfiguration = ({ history, match }) => {
       <PermissionedRoute
         exact
         path={`${path}/:name/view`}
-        perm="ui-gobi-settings.permission.settings"
+        perm="ui-gobi-settings.permission.settings.view"
         returnLink={MAPPING_CONFIGS_RETURN_LINK}
         returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
       >
@@ -48,7 +48,7 @@ export const MappingConfiguration = ({ history, match }) => {
       <PermissionedRoute
         exact
         path={`${path}/:name/edit`}
-        perm="ui-gobi-settings.permission.settings"
+        perm="ui-gobi-settings.permission.settings.edit"
         returnLink={MAPPING_CONFIGS_RETURN_LINK}
         returnLinkLabelId={MAPPING_CONFIGS_RETURN_LABEL_ID}
       >

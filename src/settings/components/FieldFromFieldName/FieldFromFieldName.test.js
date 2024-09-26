@@ -34,11 +34,9 @@ describe('FieldFromFieldName', () => {
   it('should change \'Path\' when gobi field name was changed', async () => {
     renderFieldFromFieldName();
 
-    const selectionBtn = screen.getByText('ui-gobi-settings.order.mappings.field.dataSource.fromFieldName');
-
     await act(async () => {
-      user.click(selectionBtn);
-      user.click(screen.getByText(defaultProps.dataOptions[1].label));
+      await user.click(screen.getByText('stripes-components.selection.controlLabel'));
+      await user.click(screen.getByText(defaultProps.dataOptions[1].label));
     });
 
     expect(defaultProps.change).toHaveBeenCalled();
