@@ -3,7 +3,6 @@
     "configFiles": "ملفات التهيئة",
     "integrationDetails": "تفاصيل التكامل",
     "mappingConfig": "تهيئة التخطيط",
-    "permission.settings": "GOBI Integration: view and edit settings",
     "actions.restore.confirm": "تأكيد",
     "actions.restore.heading": "إعادة تعيين التهيئة الافتراضية",
     "actions.restore.message": "Resetting this configuration will delete all customizations and restore the default configuration file mappings",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
     "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
     "order.mappings.field.claimActive": "Claiming active",
-    "order.mappings.field.claimInterval": "Claiming interval"
+    "order.mappings.field.claimInterval": "Claiming interval",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }

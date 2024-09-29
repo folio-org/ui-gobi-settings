@@ -3,7 +3,6 @@
     "configFiles": "구성 파일",
     "integrationDetails": "통합 세부 정보",
     "mappingConfig": "매핑 구성",
-    "permission.settings": "GOBI 연동: 설정 보기 및 편집",
     "actions.restore.confirm": "Confirm",
     "actions.restore.heading": "Reset default configuration",
     "actions.restore.message": "Resetting this configuration will delete all customizations and restore the default configuration file mappings",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
     "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
     "order.mappings.field.claimActive": "Claiming active",
-    "order.mappings.field.claimInterval": "Claiming interval"
+    "order.mappings.field.claimInterval": "Claiming interval",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }

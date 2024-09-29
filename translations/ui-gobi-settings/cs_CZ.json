@@ -3,7 +3,6 @@
     "configFiles": "Konfigurační soubory",
     "integrationDetails": "Detaily integrace",
     "mappingConfig": "Konfigurace mapování",
-    "permission.settings": "Integrace GOBI: zobrazení a úprava nastavení",
     "actions.restore.confirm": "Potvrdit",
     "actions.restore.heading": "Obnovit výchozí konfiguraci",
     "actions.restore.message": "Obnovením této konfigurace se smažou všechna přizpůsobení a obnoví se výchozí mapování konfiguračních souborů.",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Vyhledat UUID akvizičních jednotek spojených s účtem",
     "mappingConfig.edit.footer.clearAll": "Vymazat všechna mapování polí",
     "order.mappings.field.claimActive": "Nárokování je aktivní",
-    "order.mappings.field.claimInterval": "Interval nárokování"
+    "order.mappings.field.claimInterval": "Interval nárokování",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }

@@ -3,7 +3,6 @@
     "configFiles": "Archivos de configuración",
     "integrationDetails": "Detalles de la integración",
     "mappingConfig": "Configuración de mapas",
-    "permission.settings": "Integración GOBI: ver y editar ajustes",
     "actions.restore.confirm": "Confirmar",
     "actions.restore.heading": "Restablecer configuración predeterminada",
     "actions.restore.message": "Al restablecer esta configuración, se eliminarán todas las personalizaciones y se restaurarán las asignaciones predeterminadas de los archivos de configuración.",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Búsqueda de UUID de unidad de adquisición asociados a la cuenta",
     "mappingConfig.edit.footer.clearAll": "Borrar todos los mapeos de campo",
     "order.mappings.field.claimActive": "Claiming active",
-    "order.mappings.field.claimInterval": "Claiming interval"
+    "order.mappings.field.claimInterval": "Claiming interval",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }
