@@ -3,7 +3,6 @@
     "configFiles": "配置文件",
     "integrationDetails": "整合細節",
     "mappingConfig": "對應配置",
-    "permission.settings": "GOBI 整合：檢視和編輯設定",
     "actions.restore.confirm": "確認",
     "actions.restore.heading": "重設預設配置",
     "actions.restore.message": "重置此配置將刪除所有自訂並恢復預設配置文件對應",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找與帳戶相關的採購單位 UUID",
     "mappingConfig.edit.footer.clearAll": "清除所有欄位對應",
     "order.mappings.field.claimActive": "索賠啟動",
-    "order.mappings.field.claimInterval": "索賠間隔"
+    "order.mappings.field.claimInterval": "索賠間隔",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }

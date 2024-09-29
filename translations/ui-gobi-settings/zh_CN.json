@@ -3,7 +3,6 @@
     "configFiles": "配置文件",
     "integrationDetails": "集成详情",
     "mappingConfig": "映射配置",
-    "permission.settings": "GOBI集成：查看和编辑设置",
     "actions.restore.confirm": "确认",
     "actions.restore.heading": "重置默认配置",
     "actions.restore.message": "重置本配置将删除所有自定义并恢复默认配置文件映射",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找与帐户关联的采购单位 UUID",
     "mappingConfig.edit.footer.clearAll": "清除所有字段映射",
     "order.mappings.field.claimActive": "催缺激活",
-    "order.mappings.field.claimInterval": "催缺间隔"
+    "order.mappings.field.claimInterval": "催缺间隔",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }

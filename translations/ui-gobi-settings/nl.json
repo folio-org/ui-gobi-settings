@@ -3,7 +3,6 @@
     "configFiles": "Configuratiebestanden",
     "integrationDetails": "Integratiedetails",
     "mappingConfig": "Configuratie mappen",
-    "permission.settings": "Instellingen (GOBI): Kan instellingen bekijken en bewerken",
     "actions.restore.confirm": "Bevestigen",
     "actions.restore.heading": "Standaardconfiguratie resetten",
     "actions.restore.message": "Als u deze configuratie terugzet, worden alle aanpassingen verwijderd en worden de standaard configuratiebestandstoewijzingen hersteld.",
@@ -157,5 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Acquisitie-units UUID's gekoppeld aan rekening opzoeken",
     "mappingConfig.edit.footer.clearAll": "Alle koppelingen van velden wissen",
     "order.mappings.field.claimActive": "Actief claimen",
-    "order.mappings.field.claimInterval": "Reclamatie-interval"
+    "order.mappings.field.claimInterval": "Reclamatie-interval",
+    "permission.settings.view": "Settings (GOBI Integration): Can view only",
+    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }
