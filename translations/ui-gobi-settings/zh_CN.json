@@ -157,6 +157,6 @@
     "mappingConfig.edit.footer.clearAll": "清除所有字段映射",
     "order.mappings.field.claimActive": "催缺激活",
     "order.mappings.field.claimInterval": "催缺间隔",
-    "permission.settings.view": "Settings (GOBI Integration): Can view only",
-    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
+    "permission.settings.view": "设置（GOBI 集成）：仅可查看",
+    "permission.settings.edit": "设置（GOBI 集成）：可以查看和编辑设置"
 }
