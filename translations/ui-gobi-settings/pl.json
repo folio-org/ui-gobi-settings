@@ -23,7 +23,7 @@
     "order.mappings.accordion.polOtherResources": "Inne szczegóły zasobów",
     "order.mappings.accordion.polLocation": "Lokalizacja",
     "order.mappings.accordion.polTags": "Tagi pozycji zamówienia",
-    "order.mappings.accordion.relatedAgreements": "Related agreements",
+    "order.mappings.accordion.relatedAgreements": "Powiązane umowy",
     "order.mappings.field.dataSource.defaultValue": "Wartość domyślna",
     "order.mappings.field.dataSource.fromFieldName": "Z pola",
     "order.mappings.field.dataSource.fromFieldPath": "Ścieżka",
