@@ -1,6 +1,9 @@
 # Change history for ui-gobi-settings
 
-## (3.2.0 IN PROGRESS)
+## 3.3.0 (IN PROGRESS)
+
+## [3.2.0](https://github.com/folio-org/ui-gobi-settings/tree/v3.2.0) (2024-10-31)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v3.1.0...v3.2.0)
 
 * New permission: Settings (Gobi Integration): Can view only. Refs UIGS-25.
 
