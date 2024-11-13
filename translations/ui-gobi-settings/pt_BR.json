@@ -95,7 +95,7 @@
     "order.mappings.field.receivingWorkflow": "Fluxo de recebimento",
     "order.mappings.field.requester": "Solicitante",
     "order.mappings.field.reEncumber": "Alocar novamente",
-    "order.mappings.field.rush": "Priotirário",
+    "order.mappings.field.rush": "Urgente",
     "order.mappings.field.selector": "Seletor",
     "order.mappings.field.shipTo": "Enviar para",
     "order.mappings.field.source": "Fonte",
