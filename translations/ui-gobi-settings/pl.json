@@ -49,7 +49,7 @@
     "order.mappings.field.description": "Uwaga wewnętrzna",
     "order.mappings.field.discount": "Rabat",
     "order.mappings.field.discountType": "Rodzaj",
-    "order.mappings.field.donor": "Donor",
+    "order.mappings.field.donor": "Darczyńca",
     "order.mappings.field.edition": "Wydanie",
     "order.mappings.field.exchangeRate": "Ustaw kurs wymiany",
     "order.mappings.field.expectedActivation": "Oczekiwana aktywacja",

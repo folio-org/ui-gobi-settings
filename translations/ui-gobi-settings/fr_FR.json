@@ -155,7 +155,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
     "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
-    "order.mappings.field.claimActive": "Claiming active",
+    "order.mappings.field.claimActive": "Réclamation enclenchée",
     "order.mappings.field.claimInterval": "Claiming interval",
     "permission.settings.view": "Settings (GOBI Integration): Can view only",
     "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
