@@ -43,7 +43,7 @@
     "order.mappings.field.collection": "Kolekcja",
     "order.mappings.field.contributor": "Współtwórca",
     "order.mappings.field.contributorNameType": "Rodzaj współtwórcy",
-    "order.mappings.field.createInventory": "Create inventory",
+    "order.mappings.field.createInventory": "Utwórz rekord katalogowy",
     "order.mappings.field.currency": "Waluta",
     "order.mappings.field.dateOrdered": "Date ordered",
     "order.mappings.field.description": "Uwaga wewnętrzna",
@@ -92,7 +92,7 @@
     "order.mappings.field.receiptDate": "Data odbioru",
     "order.mappings.field.receiptDue": "Receipt due",
     "order.mappings.field.receivingNote": "Uwaga do dostawy",
-    "order.mappings.field.receivingWorkflow": "Receiving workflow",
+    "order.mappings.field.receivingWorkflow": "Przepływ dostaw",
     "order.mappings.field.requester": "Rezerwujący",
     "order.mappings.field.reEncumber": "Ponowne obciążenie",
     "order.mappings.field.rush": "Ponaglenie",
@@ -155,8 +155,8 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Lookup acquisition unit UUIDs associated with name",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
     "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
-    "order.mappings.field.claimActive": "Claiming active",
+    "order.mappings.field.claimActive": "Aktywny monit",
     "order.mappings.field.claimInterval": "Claiming interval",
-    "permission.settings.view": "Settings (GOBI Integration): Can view only",
-    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
+    "permission.settings.view": "Ustawienia (integracja GOBI): można tylko przeglądać",
+    "permission.settings.edit": "Ustawienia (integracja GOBI): możliwość przeglądania i edycji ustawień"
 }
