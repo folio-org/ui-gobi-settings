@@ -156,7 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "查找與帳戶相關的採購單位 UUID",
     "mappingConfig.edit.footer.clearAll": "清除所有欄位對應",
     "order.mappings.field.claimActive": "索賠啟動",
-    "order.mappings.field.claimInterval": "索賠間隔",
+    "order.mappings.field.claimInterval": "催缺間隔",
     "permission.settings.view": "Settings (GOBI Integration): Can view only",
     "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }
