@@ -1,8 +1,10 @@
 # Change history for ui-gobi-settings
 
-## 3.3.0 (IN PROGRESS)
+## 4.0.0 (IN PROGRESS)
 
 * Migrate to shared GA workflows. Refs UIGS-28.
+* *BREAKING* Migrate stripes dependencies to their Sunflower versions. Refs UIGS-29.
+* *BREAKING* Migrate `react-intl` to v7. Refs UIGS-30.
 
 ## [3.2.0](https://github.com/folio-org/ui-gobi-settings/tree/v3.2.0) (2024-10-31)
 [Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v3.1.0...v3.2.0)
