@@ -157,6 +157,6 @@
     "mappingConfig.edit.footer.clearAll": "Alle koppelingen van velden wissen",
     "order.mappings.field.claimActive": "Actief claimen",
     "order.mappings.field.claimInterval": "Reclamatie-interval",
-    "permission.settings.view": "Settings (GOBI Integration): Can view only",
-    "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
+    "permission.settings.view": "Instellingen (GOBI Integratie): Kan alleen bekijken",
+    "permission.settings.edit": "Instellingen (GOBI Integratie): Kan instellingen bekijken en bewerken"
 }

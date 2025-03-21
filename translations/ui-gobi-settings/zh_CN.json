@@ -120,7 +120,7 @@
     "order.mappings.translator.lookupContributorNameTypeId": "查询贡献UUID",
     "order.mappings.translator.lookupExpenseClassId": "查询支出类别UUID",
     "order.mappings.translator.lookupAcquisitionMethodIds": "查询采购方式UUIDs",
-    "order.mappings.translator.lookupLocationId": "查询（典藏）馆藏地记录的UUID",
+    "order.mappings.translator.lookupLocationId": "查询 : 典藏 ) 馆藏地记录的UUID",
     "order.mappings.translator.lookupMaterialTypeId": "查询资料类型的UUID",
     "order.mappings.translator.lookupFundId": "查询经费UUID",
     "order.mappings.translator.lookupMock": "查询模拟",
@@ -157,6 +157,6 @@
     "mappingConfig.edit.footer.clearAll": "清除所有字段映射",
     "order.mappings.field.claimActive": "催缺激活",
     "order.mappings.field.claimInterval": "催缺间隔",
-    "permission.settings.view": "设置（GOBI 集成）：仅可查看",
-    "permission.settings.edit": "设置（GOBI 集成）：可以查看和编辑设置"
+    "permission.settings.view": "设置 : GOBI 集成 )  : 仅可查看",
+    "permission.settings.edit": "设置 : GOBI 集成 )  : 可以查看和编辑设置"
 }

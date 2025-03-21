@@ -50,7 +50,7 @@
     "order.mappings.field.discount": "Sleva",
     "order.mappings.field.discountType": "Typ",
     "order.mappings.field.donor": "Dárce",
-    "order.mappings.field.edition": "Edice",
+    "order.mappings.field.edition": "Vydání",
     "order.mappings.field.exchangeRate": "Nastavení směnného kurzu",
     "order.mappings.field.expectedActivation": "Očekávaná aktivace",
     "order.mappings.field.expectedReceiptDate": "Očekávané datum přijetí",
