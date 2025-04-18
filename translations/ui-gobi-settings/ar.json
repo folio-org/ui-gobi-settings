@@ -5,7 +5,7 @@
     "mappingConfig": "تهيئة التخطيط",
     "actions.restore.confirm": "تأكيد",
     "actions.restore.heading": "إعادة تعيين التهيئة الافتراضية",
-    "actions.restore.message": "Resetting this configuration will delete all customizations and restore the default configuration file mappings",
+    "actions.restore.message": "ستؤدي إعادة تعيين هذه التهيئة إلى حذف جميع التخصيصات واستعادة تعيينات ملفات التهيئة الافتراضية",
     "button.edit": "تحرير",
     "order.mappings.accordion.poInfo": "معلومات أمر الشراء",
     "order.mappings.accordion.poOngoing": "بيانات أمر الشراء الجاري",
@@ -156,7 +156,7 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Lookup acquisition unit UUIDs associated with account",
     "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
     "order.mappings.field.claimActive": "Claiming active",
-    "order.mappings.field.claimInterval": "Claiming interval",
+    "order.mappings.field.claimInterval": "الفاصل الزمني للمطالبة",
     "permission.settings.view": "Settings (GOBI Integration): Can view only",
     "permission.settings.edit": "Settings (GOBI Integration): Can view and edit settings"
 }
