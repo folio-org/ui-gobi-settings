@@ -154,7 +154,7 @@
     "order.mappings.field.acquisitionUnit": "Jednostki gromadzenia",
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Znajdź UUIDy jednostek gromadzenia powiązanych z nazwą",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Znajdź UUIDy jednostek gromadzenia powiązanych z kontem",
-    "mappingConfig.edit.footer.clearAll": "Clear all field mappings",
+    "mappingConfig.edit.footer.clearAll": "Wyczyść wszystkie mapowania pól",
     "order.mappings.field.claimActive": "Monity aktywne",
     "order.mappings.field.claimInterval": "Interwał monitowania",
     "permission.settings.view": "Ustawienia (integracja GOBI): można tylko przeglądać",
