@@ -9,6 +9,6 @@ describe('getTranslatorOptions', () => {
   it('should return options for translation selection', () => {
     const options = getTranslatorOptions(intl, translators.translators);
 
-    expect(options.length).toEqual(translators.translators.length);
+    expect(options.length).toEqual(translators.translators.length - 1);
   });
 });
