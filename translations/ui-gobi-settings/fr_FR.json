@@ -46,7 +46,7 @@
     "order.mappings.field.createInventory": "Créer dans le catalogue",
     "order.mappings.field.currency": "Currency",
     "order.mappings.field.dateOrdered": "Date ordered",
-    "order.mappings.field.description": "Internal note",
+    "order.mappings.field.description": "Note interne",
     "order.mappings.field.discount": "Discount",
     "order.mappings.field.discountType": "Type",
     "order.mappings.field.donor": "Donor",
