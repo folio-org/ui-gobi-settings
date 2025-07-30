@@ -130,6 +130,7 @@ export const GOBI_FIELDS = {
   localData2: 'Local Data 2',
   localData3: 'Local Data 3',
   localData4: 'Local Data 4',
+  suppressInstanceFromDiscovery: 'Suppress instance from discovery',
 };
 
 export const GOBI_FIELDS_PATH_MAP = {
@@ -152,4 +153,5 @@ export const GOBI_FIELDS_PATH_MAP = {
   [GOBI_FIELDS.localData2]: '//LocalData[Description=\'LocalData2\']/Value',
   [GOBI_FIELDS.localData3]: '//LocalData[Description=\'LocalData3\']/Value',
   [GOBI_FIELDS.localData4]: '//LocalData[Description=\'LocalData4\']/Value',
+  [GOBI_FIELDS.suppressInstanceFromDiscovery]: '//SuppressInstanceFromDiscovery',
 };
