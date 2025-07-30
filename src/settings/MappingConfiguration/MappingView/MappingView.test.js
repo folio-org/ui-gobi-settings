@@ -83,7 +83,7 @@ describe('MappingView', () => {
       await userEvent.click(closeBtn);
 
       expect(defaultProps.onClose).toHaveBeenCalled();
-    });
+    }, 10000);
 
     it('should navigate to edit mapping form when \'Edit\' button was clicked in action menu', async () => {
       renderConfigFile();

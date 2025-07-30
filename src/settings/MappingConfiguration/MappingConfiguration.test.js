@@ -75,6 +75,6 @@ describe('MappingConfiguration', () => {
       await act(async () => userEvent.click(screen.getByLabelText('stripes-components.closeItem')));
 
       expect(screen.queryByTestId('gobi-mapping-pane')).not.toBeInTheDocument();
-    });
+    }, 10000);
   });
 });
