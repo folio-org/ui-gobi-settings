@@ -39,10 +39,8 @@ describe('FieldFromFieldName', () => {
   it('should change \'Path\' when gobi field name was changed', async () => {
     renderFieldFromFieldName();
 
-    await act(async () => {
-      await userEvent.click(screen.getByText('stripes-components.selection.controlLabel'));
-      await userEvent.click(screen.getByText(defaultProps.dataOptions[1].label));
-    });
+    await act(async () => userEvent.click(screen.getByText('stripes-components.selection.controlLabel')));
+    await act(async () => userEvent.click(screen.getByText(defaultProps.dataOptions[1].label)));
 
     expect(defaultProps.change).toHaveBeenCalled();
   });
