@@ -1,7 +1,12 @@
-import React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { renderHook, act } from '@testing-library/react-hooks';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 
+import {
+  act,
+  renderHook,
+} from '@folio/jest-config-stripes/testing-library/react';
 import { useOkapiKy } from '@folio/stripes/core';
 
 import {

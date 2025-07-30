@@ -1,6 +1,11 @@
-import user from '@testing-library/user-event';
-import { act, render, screen } from '@testing-library/react';
 import { Form } from 'react-final-form';
+
+import {
+  act,
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import { getFieldNameOptions } from '../../MappingConfiguration/utils';
 import { FieldFromFieldName } from './FieldFromFieldName';
@@ -35,8 +40,8 @@ describe('FieldFromFieldName', () => {
     renderFieldFromFieldName();
 
     await act(async () => {
-      await user.click(screen.getByText('stripes-components.selection.controlLabel'));
-      await user.click(screen.getByText(defaultProps.dataOptions[1].label));
+      await userEvent.click(screen.getByText('stripes-components.selection.controlLabel'));
+      await userEvent.click(screen.getByText(defaultProps.dataOptions[1].label));
     });
 
     expect(defaultProps.change).toHaveBeenCalled();

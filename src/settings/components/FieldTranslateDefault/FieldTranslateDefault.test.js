@@ -1,5 +1,9 @@
-import { render, screen } from '@testing-library/react';
 import { Form } from 'react-final-form';
+
+import {
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
 
 import { FieldTranslateDefault } from './FieldTranslateDefault';
 

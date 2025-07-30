@@ -1,6 +1,12 @@
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { renderHook } from '@testing-library/react-hooks';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 
+import {
+  renderHook,
+  waitFor,
+} from '@folio/jest-config-stripes/testing-library/react';
 import { useOkapiKy } from '@folio/stripes/core';
 
 import { mappingConfig } from '../../../../test/jest/fixtures/mappingConfig';
@@ -27,9 +33,9 @@ describe('useOrderMapping', () => {
   });
 
   it('should fetch order mapping for specified type', async () => {
-    const { result, waitFor } = renderHook(() => useOrderMapping('TestType'), { wrapper });
+    const { result } = renderHook(() => useOrderMapping('TestType'), { wrapper });
 
-    await waitFor(() => !result.current.isLoading);
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.mappings).toEqual(mappingConfig.orderMappings.mappings);
   });

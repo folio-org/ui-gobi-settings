@@ -1,12 +1,17 @@
-import user from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 import { MemoryRouter } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
+
+import {
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import { HasCommand } from '@folio/stripes/components';
-import {
-  useAccordionToggle,
-} from '@folio/stripes-acq-components';
+import { useAccordionToggle } from '@folio/stripes-acq-components';
 
 import { mappingConfig } from '../../../../test/jest/fixtures/mappingConfig';
 import { useOrderMapping } from '../../hooks';
@@ -70,22 +75,22 @@ describe('MappingView', () => {
       HasCommand.mockClear();
     });
 
-    it('should close mapping view pane when close button was clicked', () => {
+    it('should close mapping view pane when close button was clicked', async () => {
       renderConfigFile();
 
       const closeBtn = screen.getByLabelText('stripes-components.closeItem');
 
-      user.click(closeBtn);
+      await userEvent.click(closeBtn);
 
       expect(defaultProps.onClose).toHaveBeenCalled();
     });
 
-    it('should navigate to edit mapping form when \'Edit\' button was clicked in action menu', () => {
+    it('should navigate to edit mapping form when \'Edit\' button was clicked in action menu', async () => {
       renderConfigFile();
 
       const editBtn = screen.getByTestId('action-edit-mapping');
 
-      user.click(editBtn);
+      await userEvent.click(editBtn);
 
       expect(defaultProps.history.push).toHaveBeenCalled();
     });

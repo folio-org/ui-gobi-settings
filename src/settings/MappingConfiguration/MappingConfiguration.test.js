@@ -1,7 +1,18 @@
-import user from '@testing-library/user-event';
-import { act, render, screen } from '@testing-library/react';
-import { MemoryRouter, withRouter } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
+import {
+  MemoryRouter,
+  withRouter,
+} from 'react-router-dom';
+
+import {
+  act,
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import { MappingConfiguration } from './MappingConfiguration';
 
@@ -50,18 +61,18 @@ describe('MappingConfiguration', () => {
 
       const listItems = screen.getAllByTestId('mapping-type-list-item');
 
-      await act(async () => user.click(listItems[0]));
+      await act(async () => userEvent.click(listItems[0]));
 
       expect(screen.getByTestId('gobi-mapping-pane')).toBeInTheDocument();
     });
 
-    it('should close mapping pane when \'Close\' icon button was clicked', () => {
+    it('should close mapping pane when \'Close\' icon button was clicked', async () => {
       renderMappingConfiguration();
 
       const listItems = screen.getAllByTestId('mapping-type-list-item');
 
-      act(() => user.click(listItems[0]));
-      act(() => user.click(screen.getByLabelText('stripes-components.closeItem')));
+      await act(async () => userEvent.click(listItems[0]));
+      await act(async () => userEvent.click(screen.getByLabelText('stripes-components.closeItem')));
 
       expect(screen.queryByTestId('gobi-mapping-pane')).not.toBeInTheDocument();
     });

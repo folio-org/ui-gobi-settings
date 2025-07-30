@@ -1,5 +1,9 @@
-import user from '@testing-library/user-event';
-import { act, render, screen } from '@testing-library/react';
+import {
+  act,
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import { MappingFormFooter } from './MappingFormFooter';
 
@@ -29,7 +33,7 @@ describe('MappingFieldEdit', () => {
   it('should call \'onClearMappings\' when \'Clear all field mappings\' button was clicked', async () => {
     renderMappingFormFooter();
 
-    await act(async () => user.click(screen.getByText('ui-gobi-settings.mappingConfig.edit.footer.clearAll')));
+    await act(async () => userEvent.click(screen.getByText('ui-gobi-settings.mappingConfig.edit.footer.clearAll')));
 
     expect(defaultProps.onClearMappings).toHaveBeenCalled();
   });
