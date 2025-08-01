@@ -2,6 +2,8 @@
 
 ## 4.1.0 (IN PROGRESS)
 
+* Add "Suppress from discovery" field to mappings configuration. Refs UIGS-32.
+
 ## [4.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v4.0.0) (2025-03-12)
 [Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v3.2.0...v4.0.0)
 

@@ -1,6 +1,10 @@
-import user from '@testing-library/user-event';
-import { render, screen } from '@testing-library/react';
 import { Form } from 'react-final-form';
+
+import {
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import {
   CUSTOM_PATH,
@@ -39,7 +43,7 @@ describe('FieldFromPath', () => {
     expect(screen.getByText('ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath')).toBeInTheDocument();
   });
 
-  it('should render field \'Path\' as text input if it is custom', () => {
+  it('should render field \'Path\' as text input if it is custom', async () => {
     renderFieldFromPath({
       mappingField: {
         ...defaultProps.mappingField,
@@ -53,7 +57,7 @@ describe('FieldFromPath', () => {
     const pathInput = screen.getByLabelText('ui-gobi-settings.order.mappings.field.dataSource.fromFieldPath');
     const customPath = '//Suffix';
 
-    user.type(pathInput, customPath);
+    await userEvent.type(pathInput, customPath);
 
     expect(pathInput.value).toEqual(customPath);
   });

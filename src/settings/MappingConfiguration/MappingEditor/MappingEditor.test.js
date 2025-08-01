@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 import { MemoryRouter } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { mappingConfig, translators } from '../../../../test/jest/fixtures';
+import {
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+
+import {
+  mappingConfig,
+  translators,
+} from 'fixtures';
 import {
   useOrderMapping,
   useOrderMappingTypeMutation,

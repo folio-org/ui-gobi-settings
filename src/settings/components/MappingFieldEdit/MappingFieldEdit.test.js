@@ -1,6 +1,11 @@
-import user from '@testing-library/user-event';
-import { act, render, screen } from '@testing-library/react';
 import { Form } from 'react-final-form';
+
+import {
+  act,
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import userEvent from '@folio/jest-config-stripes/testing-library/user-event';
 
 import { getFieldNameOptions } from '../../MappingConfiguration/utils';
 import { MappingFieldEdit } from './MappingFieldEdit';
@@ -48,7 +53,7 @@ describe('MappingFieldEdit', () => {
   it('should clear field mappings when \'Clear\' icon button was clicked', async () => {
     renderMappingFieldEdit();
 
-    await act(async () => user.click(screen.getByRole('button', { name: 'times-circle-solid' })));
+    await act(async () => userEvent.click(screen.getByRole('button', { name: 'times-circle-solid' })));
 
     expect(defaultProps.change).toHaveBeenCalled();
   });

@@ -1,6 +1,12 @@
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { renderHook } from '@testing-library/react-hooks';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 
+import {
+  renderHook,
+  waitFor,
+} from '@folio/jest-config-stripes/testing-library/react';
 import { useOkapiKy } from '@folio/stripes/core';
 
 import { translators } from '../../../../test/jest/fixtures';
@@ -27,9 +33,9 @@ describe('useTranslators', () => {
   });
 
   it('should fetch mapping translators', async () => {
-    const { result, waitFor } = renderHook(() => useTranslators(), { wrapper });
+    const { result } = renderHook(() => useTranslators(), { wrapper });
 
-    await waitFor(() => !result.current.isLoading);
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.translators).toEqual(translators.translators);
   });

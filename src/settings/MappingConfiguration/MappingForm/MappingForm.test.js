@@ -1,11 +1,16 @@
-import { act, render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
-
-import { HasCommand } from '@folio/stripes/components';
 import {
-  useAccordionToggle,
-} from '@folio/stripes-acq-components';
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
+import { MemoryRouter } from 'react-router-dom';
+
+import {
+  render,
+  screen,
+} from '@folio/jest-config-stripes/testing-library/react';
+import { HasCommand } from '@folio/stripes/components';
+import { useAccordionToggle } from '@folio/stripes-acq-components';
+
 import MappingForm from './MappingForm';
 
 jest.mock('@folio/stripes/components', () => ({
