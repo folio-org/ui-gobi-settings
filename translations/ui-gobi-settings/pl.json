@@ -158,5 +158,6 @@
     "order.mappings.field.claimActive": "Monity aktywne",
     "order.mappings.field.claimInterval": "Interwał monitowania",
     "permission.settings.view": "Ustawienia (integracja GOBI): można tylko przeglądać",
-    "permission.settings.edit": "Ustawienia (integracja GOBI): możliwość przeglądania i edycji ustawień"
+    "permission.settings.edit": "Ustawienia (integracja GOBI): możliwość przeglądania i edycji ustawień",
+    "order.mappings.field.suppressInstanceFromDiscovery": "Ukryj instancję w katalogu WWW, gdy jest generowana przez zamówienie"
 }
