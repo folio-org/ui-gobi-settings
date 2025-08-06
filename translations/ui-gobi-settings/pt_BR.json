@@ -158,5 +158,6 @@
     "order.mappings.field.claimActive": "Reclamação ativa",
     "order.mappings.field.claimInterval": "Intervalo de reclamação",
     "permission.settings.view": "Configurações (integração GOBI): Pode visualizar apenas",
-    "permission.settings.edit": "Configurações (Integração GOBI): Pode visualizar e editar configurações"
+    "permission.settings.edit": "Configurações (Integração GOBI): Pode visualizar e editar configurações",
+    "order.mappings.field.suppressInstanceFromDiscovery": "Suprimir instância da descoberta quando gerada por pedido"
 }
