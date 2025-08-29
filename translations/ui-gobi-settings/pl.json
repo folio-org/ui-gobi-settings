@@ -100,7 +100,7 @@
     "order.mappings.field.shipTo": "Dostawa do",
     "order.mappings.field.source": "Źródło",
     "order.mappings.field.subscriptionFrom": "Subskrypcja od",
-    "order.mappings.field.subscriptionInterval": "Interwał subskrypcji",
+    "order.mappings.field.subscriptionInterval": "Okres subskrypcji",
     "order.mappings.field.subscriptionTo": "Subskrypcja do",
     "order.mappings.field.suffix": "Sufiks",
     "order.mappings.field.tags": "Tagi",
