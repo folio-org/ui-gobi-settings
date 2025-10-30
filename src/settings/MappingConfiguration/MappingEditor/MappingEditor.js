@@ -1,3 +1,4 @@
+import upperFirst from 'lodash/upperFirst';
 import PropTypes from 'prop-types';
 import { useCallback, useMemo } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -59,7 +60,7 @@ export const MappingEditor = ({
     changeMappingConfig({
       data: formMappings,
       mappingType,
-      name,
+      name: upperFirst(name),
     })
       .then(() => {
         showCallout({
