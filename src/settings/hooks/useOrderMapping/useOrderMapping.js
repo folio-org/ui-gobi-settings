@@ -29,7 +29,7 @@ export const useOrderMapping = (orderMappingType) => {
   return {
     isLoading,
     mappingType: data?.mappingType,
-    mappings: data?.orderMappings?.mappings || [],
+    orderMappings: data?.orderMappings,
     refetch,
   };
 };

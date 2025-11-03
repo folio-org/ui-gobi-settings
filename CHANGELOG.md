@@ -4,6 +4,7 @@
 
 * Add "Suppress from discovery" field to mappings configuration. Refs UIGS-32.
 * Provide an original mapping type name on mutation request. Refs UIGS-33.
+* Provide `_version` and `id` in the mutation requests. Refs UIGS-34.
 
 ## [4.0.0](https://github.com/folio-org/ui-gobi-settings/tree/v4.0.0) (2025-03-12)
 [Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v3.2.0...v4.0.0)

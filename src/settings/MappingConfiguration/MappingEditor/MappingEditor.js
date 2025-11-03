@@ -1,20 +1,21 @@
-import upperFirst from 'lodash/upperFirst';
 import PropTypes from 'prop-types';
-import { useCallback, useMemo } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+import {
+  useCallback,
+  useMemo,
+} from 'react';
+import {
+  FormattedMessage,
+  useIntl,
+} from 'react-intl';
 import { useParams } from 'react-router-dom';
 
 import {
   Layer,
   LoadingPane,
 } from '@folio/stripes/components';
-import {
-  useShowCallout,
-} from '@folio/stripes-acq-components';
+import { useShowCallout } from '@folio/stripes-acq-components';
 
-import {
-  FORMATTED_ORDER_MAPPING_TYPES,
-} from '../../constants';
+import { FORMATTED_ORDER_MAPPING_TYPES } from '../../constants';
 import {
   useOrderMapping,
   useOrderMappingTypeMutation,
@@ -31,23 +32,23 @@ export const MappingEditor = ({
   rootPath,
 }) => {
   const intl = useIntl();
-  const { name } = useParams();
   const showCallout = useShowCallout();
+  const { name } = useParams();
+
   const {
     isLoading: isMappingsLoading,
-    mappings,
     mappingType,
+    orderMappings,
   } = useOrderMapping(name);
   const {
     isLoading: isTranslatorsLoading,
     translators,
   } = useTranslators();
-  const {
-    changeMappingConfig,
-  } = useOrderMappingTypeMutation();
 
+  const { changeMappingConfig } = useOrderMappingTypeMutation();
+
+  const mappings = orderMappings?.mappings;
   const contentLabel = intl.formatMessage({ id: 'ui-gobi-settings.mappingConfig' });
-
   const initialValues = useMemo(() => mappingsToFormValues(mappings), [mappings]);
 
   const onClose = useCallback(() => {
@@ -55,12 +56,16 @@ export const MappingEditor = ({
   }, [history, name, rootPath]);
 
   const onSubmit = useCallback((values) => {
-    const formMappings = formValuesToMappings(values, name);
+    const orderType = orderMappings?.orderType;
+    const formMappings = formValuesToMappings(values);
 
     changeMappingConfig({
-      data: formMappings,
+      data: {
+        ...orderMappings,
+        ...formMappings,
+      },
       mappingType,
-      name: upperFirst(name),
+      name: orderType,
     })
       .then(() => {
         showCallout({
@@ -68,7 +73,7 @@ export const MappingEditor = ({
             <FormattedMessage
               id="ui-gobi-settings.mappingConfig.update.success"
               values={{
-                name: FORMATTED_ORDER_MAPPING_TYPES[name],
+                name: FORMATTED_ORDER_MAPPING_TYPES[orderType],
               }}
             />
           ),
@@ -82,14 +87,14 @@ export const MappingEditor = ({
             <FormattedMessage
               id="ui-gobi-settings.mappingConfig.update.error"
               values={{
-                name: FORMATTED_ORDER_MAPPING_TYPES[name],
+                name: FORMATTED_ORDER_MAPPING_TYPES[orderType],
               }}
             />
           ),
           type: 'error',
         });
       });
-  }, [mappingType, name, onClose, changeMappingConfig, showCallout]);
+  }, [changeMappingConfig, mappingType, onClose, orderMappings, showCallout]);
 
   const isLoading = isMappingsLoading || isTranslatorsLoading;
 

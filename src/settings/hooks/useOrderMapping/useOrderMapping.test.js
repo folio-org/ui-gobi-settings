@@ -9,12 +9,10 @@ import {
 } from '@folio/jest-config-stripes/testing-library/react';
 import { useOkapiKy } from '@folio/stripes/core';
 
-import { mappingConfig } from '../../../../test/jest/fixtures/mappingConfig';
+import { mappingConfig } from 'fixtures/mappingConfig';
 import { useOrderMapping } from './useOrderMapping';
 
 const queryClient = new QueryClient();
-
-// eslint-disable-next-line react/prop-types
 const wrapper = ({ children }) => (
   <QueryClientProvider client={queryClient}>
     {children}
@@ -37,6 +35,6 @@ describe('useOrderMapping', () => {
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
-    expect(result.current.mappings).toEqual(mappingConfig.orderMappings.mappings);
+    expect(result.current.orderMappings).toEqual(mappingConfig.orderMappings);
   });
 });
