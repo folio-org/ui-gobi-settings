@@ -103,7 +103,7 @@ export const MappingView = ({
           type: 'error',
         });
       });
-  }, [restoreMappingConfig, refetch, showCallout, name, toggleRestoreConfirmation]);
+  }, [orderMappings?.orderType, refetch, restoreMappingConfig, showCallout, toggleRestoreConfirmation]);
 
   const shortcuts = [
     {

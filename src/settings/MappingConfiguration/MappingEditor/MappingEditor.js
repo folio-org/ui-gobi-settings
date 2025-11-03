@@ -56,7 +56,6 @@ export const MappingEditor = ({
   }, [history, name, rootPath]);
 
   const onSubmit = useCallback((values) => {
-    const orderType = orderMappings?.orderType;
     const formMappings = formValuesToMappings(values);
 
     changeMappingConfig({
@@ -65,7 +64,7 @@ export const MappingEditor = ({
         ...formMappings,
       },
       mappingType,
-      name: orderType,
+      name: orderMappings?.orderType,
     })
       .then(() => {
         showCallout({
@@ -73,7 +72,7 @@ export const MappingEditor = ({
             <FormattedMessage
               id="ui-gobi-settings.mappingConfig.update.success"
               values={{
-                name: FORMATTED_ORDER_MAPPING_TYPES[orderType],
+                name: FORMATTED_ORDER_MAPPING_TYPES[name],
               }}
             />
           ),
@@ -87,14 +86,14 @@ export const MappingEditor = ({
             <FormattedMessage
               id="ui-gobi-settings.mappingConfig.update.error"
               values={{
-                name: FORMATTED_ORDER_MAPPING_TYPES[orderType],
+                name: FORMATTED_ORDER_MAPPING_TYPES[name],
               }}
             />
           ),
           type: 'error',
         });
       });
-  }, [changeMappingConfig, mappingType, onClose, orderMappings, showCallout]);
+  }, [changeMappingConfig, mappingType, name, onClose, orderMappings, showCallout]);
 
   const isLoading = isMappingsLoading || isTranslatorsLoading;
 
