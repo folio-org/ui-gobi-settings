@@ -1,8 +1,15 @@
+import keyBy from 'lodash/keyBy';
+import mapValues from 'lodash/mapValues';
 import PropTypes from 'prop-types';
-import { useCallback, useMemo } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
+import {
+  useCallback,
+  useMemo,
+} from 'react';
+import {
+  FormattedMessage,
+  useIntl,
+} from 'react-intl';
 import { useParams } from 'react-router-dom';
-import { keyBy, mapValues } from 'lodash';
 
 import {
   Accordion,
@@ -20,14 +27,16 @@ import {
   Row,
 } from '@folio/stripes/components';
 import {
+  IfPermission,
+  useStripes,
+} from '@folio/stripes/core';
+import {
   handleKeyCommand,
   useAccordionToggle,
   useModalToggle,
   usePaneFocus,
   useShowCallout,
 } from '@folio/stripes-acq-components';
-
-import { IfPermission, useStripes } from '@folio/stripes/core';
 
 import { MappingFieldView } from '../../components';
 import {
@@ -44,25 +53,16 @@ import {
 
 export const MappingView = ({
   history,
-  rootPath,
   onClose,
+  rootPath,
 }) => {
   const intl = useIntl();
   const stripes = useStripes();
+  const showCallout = useShowCallout();
   const { name } = useParams();
 
   const { paneTitleRef } = usePaneFocus();
   const [isRestoreConfirmation, toggleRestoreConfirmation] = useModalToggle();
-  const {
-    isLoading,
-    mappingType,
-    mappings,
-    refetch,
-  } = useOrderMapping(name);
-  const showCallout = useShowCallout();
-
-  const mappingMap = useMemo(() => keyBy(mappings, 'field'), [mappings]);
-  const contentLabel = intl.formatMessage({ id: 'ui-gobi-settings.mappingConfig' });
 
   const [
     expandAll,
@@ -70,7 +70,18 @@ export const MappingView = ({
     toggleSection,
   ] = useAccordionToggle(INITIAL_ORDER_MAPPING_ACCORDIONS);
 
+  const {
+    isLoading,
+    mappingType,
+    orderMappings,
+    refetch,
+  } = useOrderMapping(name);
+
   const { restoreMappingConfig } = useOrderMappingTypeMutation();
+
+  const mappings = orderMappings?.mappings;
+  const mappingMap = useMemo(() => keyBy(mappings, 'field'), [mappings]);
+  const contentLabel = intl.formatMessage({ id: 'ui-gobi-settings.mappingConfig' });
 
   const onEdit = useCallback(() => {
     history.push(`${rootPath}/${name}/edit`);
@@ -78,7 +89,7 @@ export const MappingView = ({
 
   const onRestoreDefault = useCallback(async () => {
     toggleRestoreConfirmation();
-    restoreMappingConfig(name)
+    restoreMappingConfig(orderMappings?.orderType)
       .then(() => {
         refetch();
 
@@ -92,7 +103,7 @@ export const MappingView = ({
           type: 'error',
         });
       });
-  }, [restoreMappingConfig, refetch, showCallout, name, toggleRestoreConfirmation]);
+  }, [orderMappings?.orderType, refetch, restoreMappingConfig, showCallout, toggleRestoreConfirmation]);
 
   const shortcuts = [
     {
