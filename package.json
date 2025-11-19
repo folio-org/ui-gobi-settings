@@ -77,7 +77,9 @@
         "permissionName": "settings.gobi-settings.enabled",
         "displayName": "GOBI Integration: display list of settings pages",
         "subPermissions": [
-          "settings.enabled"
+          "settings.enabled",
+          "mod-settings.entries.collection.get",
+          "mod-settings.global.read.stripes-core.prefs.manage"
         ],
         "visible": false
       },
