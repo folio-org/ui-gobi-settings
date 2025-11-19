@@ -1,6 +1,6 @@
 {
   "name": "@folio/gobi-settings",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "GOBI integration settings",
   "main": "src/index.js",
   "repository": {
