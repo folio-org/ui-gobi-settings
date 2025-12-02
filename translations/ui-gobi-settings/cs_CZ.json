@@ -155,8 +155,8 @@
     "order.mappings.translator.lookupAcquisitionUnitIdsByName": "Vyhledat UUID akvizičních jednotek spojené s názvem",
     "order.mappings.translator.lookupAcquisitionUnitIdsByAccount": "Vyhledat UUID akvizičních jednotek spojených s účtem",
     "mappingConfig.edit.footer.clearAll": "Vymazat všechna mapování polí",
-    "order.mappings.field.claimActive": "Nárokování je aktivní",
-    "order.mappings.field.claimInterval": "Interval nárokování",
+    "order.mappings.field.claimActive": "Reklamace je aktivní",
+    "order.mappings.field.claimInterval": "Reklamační interval",
     "permission.settings.view": "Nastavení (Integrace GOBI): Může zobrazit pouze",
     "permission.settings.edit": "Nastavení (integrace GOBI): Nastavení lze zobrazit a upravit",
     "order.mappings.field.suppressInstanceFromDiscovery": "Potlačit titul z vyhledávání, pokud je generován objednávkou"
