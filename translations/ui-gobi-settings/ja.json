@@ -68,7 +68,7 @@
     "order.mappings.field.notes": "ノート",
     "order.mappings.field.orderType": "発注タイプ",
     "order.mappings.field.ongoingIsSubscription": "サブスクリプション",
-    "order.mappings.field.ongoingDate": "更新日",
+    "order.mappings.field.ongoingDate": "リニューアル日",
     "order.mappings.field.ongoingInterval": "Renewal interval",
     "order.mappings.field.ongoingManual": "Manual renewal",
     "order.mappings.field.ongoingReviewPeriod": "Review period",

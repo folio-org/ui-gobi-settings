@@ -87,7 +87,7 @@
     "order.mappings.field.publicationDate": "Data wydania",
     "order.mappings.field.publisher": "Wydawca",
     "order.mappings.field.purchaseOrderId": "Purchase order ID",
-    "order.mappings.field.quantityElectronic": "Ilość elektronicznych",
+    "order.mappings.field.quantityElectronic": "Ilość (elektronicznych)",
     "order.mappings.field.quantityPhysical": "Ilość fizycznych",
     "order.mappings.field.receiptDate": "Data rachunku",
     "order.mappings.field.receiptDue": "Termin odbioru",
