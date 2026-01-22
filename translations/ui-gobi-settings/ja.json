@@ -1,7 +1,7 @@
 {
     "meta.title": "GOBIの統合",
     "configFiles": "Configuration files",
-    "integrationDetails": "Integration details",
+    "integrationDetails": "連携詳細",
     "mappingConfig": "Mapping configuration",
     "actions.restore.confirm": "確認する",
     "actions.restore.heading": "Reset default configuration",
