@@ -70,7 +70,7 @@
     "order.mappings.field.ongoingIsSubscription": "Передплата",
     "order.mappings.field.ongoingDate": "Дата поновлення",
     "order.mappings.field.ongoingInterval": "Інтервал поновлення",
-    "order.mappings.field.ongoingManual": "Оновлення вручну",
+    "order.mappings.field.ongoingManual": "Поновлення вручну",
     "order.mappings.field.ongoingReviewPeriod": "Період перегляду",
     "order.mappings.field.ongoingNotes": "Примітки",
     "order.mappings.field.ongoingReviewDate": "Дата перегляду",
