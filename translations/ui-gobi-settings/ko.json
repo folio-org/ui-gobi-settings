@@ -147,7 +147,7 @@
     "restore.success": "The default configuration was restored",
     "restore.error": "The default configuration was not restored",
     "settings": "GOBI Integration settings",
-    "mappingConfig.edit.paneTitle": "Edit {name}",
+    "mappingConfig.edit.paneTitle": "{name} 편집",
     "mappingConfig.update.success": "<b>{name}</b> mappings was successfully updated",
     "mappingConfig.update.error": "Failed to update <b>{name}</b> mappings",
     "order.mappings.translator.lookupAcquisitionUnitDefaultAcqUnitName": "Lookup acquisition unit UUIDs associated with this organizations account",
