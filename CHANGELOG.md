@@ -1,6 +1,9 @@
 # Change history for ui-gobi-settings
 
-## 4.1.0 (IN PROGRESS)
+## 4.2.0 (IN PROGRESS)
+
+## [4.1.0](https://github.com/folio-org/ui-gobi-settings/tree/v4.1.0) (2026-04-17)
+[Full Changelog](https://github.com/folio-org/ui-gobi-settings/compare/v4.0.0...v4.1.0)
 
 * Add "Suppress from discovery" field to mappings configuration. Refs UIGS-32.
 * Provide an original mapping type name on mutation request. Refs UIGS-33.
