@@ -1,6 +1,6 @@
 {
   "name": "@folio/gobi-settings",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "GOBI integration settings",
   "main": "src/index.js",
   "repository": {
@@ -23,8 +23,8 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@folio/eslint-config-stripes": "^8.0.0",
     "@folio/stripes": "^10.0.0",
-    "@folio/stripes-cli": "^4.0.0",
-    "@folio/jest-config-stripes": "^3.0.0",
+    "@folio/stripes-cli": "^5.0.0",
+    "@folio/jest-config-stripes": "^4.0.0",
     "core-js": "^3.6.1",
     "eslint": "^7.32.0",
     "eslint-plugin-filenames": "^1.3.2",
@@ -39,7 +39,7 @@
     "regenerator-runtime": "^0.13.3"
   },
   "dependencies": {
-    "@folio/stripes-acq-components": "~7.1.0",
+    "@folio/stripes-acq-components": "~7.2.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.0",
     "query-string": "^7.1.2"
